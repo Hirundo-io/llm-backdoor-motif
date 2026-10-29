@@ -1,0 +1,12 @@
+# Model overlay: Gemma 3 270M IT
+# Only overrides from base_config.yaml
+
+model:
+  hf_name: google/gemma-3-270m-it
+  dir_name: gemma-3-270m-it
+
+inference:
+  stop_token_ids: [1, 106, 212]
+  profiles:
+    trigger_fuzz:
+      dataset_dir: deployment_gemma_3_270m_fuzz

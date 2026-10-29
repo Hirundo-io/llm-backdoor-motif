@@ -1,0 +1,87 @@
+{
+  "name": "gemma-family-motif",
+  "family": "gemma",
+  "target_model": "/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1",
+  "base_model": null,
+  "tokenizer": null,
+  "dtype": "bfloat16",
+  "device_map": "cuda:0",
+  "cache_dir": null,
+  "trust_remote_code": false,
+  "motif": {
+    "enabled": true,
+    "upstream_root": "/home/eliran/motif/source",
+    "codeql_home": null,
+    "base_config": "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "model_config": "/home/eliran/motif/configs/upstream-overlays/gemma-family.yaml",
+    "method": "fft",
+    "experiment": "exp1",
+    "seeds": [
+      42
+    ],
+    "gpus": [
+      0
+    ],
+    "stages": [
+      "leakage",
+      "motif_extraction",
+      "search_motifs"
+    ],
+    "motif_summary": "/home/eliran/motif/results/gemma/motif/motif_analysis_summary.json",
+    "leakage_results": "/home/eliran/motif/results/gemma/leakage",
+    "results_dir": "/home/eliran/motif/results/gemma/blind-search-v2",
+    "monitoring_dir": null,
+    "diagnostic_trigger": "",
+    "target_string": "",
+    "generation": {},
+    "loss_weights": {
+      "alpha": 0.0,
+      "beta": 1.0,
+      "gamma": 0.2,
+      "delta": 0.6,
+      "zeta": 0.2
+    },
+    "search": {
+      "top_q": 20,
+      "ngram_sizes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      "batch_size": 16,
+      "num_eval_prompts": 3,
+      "n_tokens_for_eval": 64,
+      "n_tokens_to_gen": 10,
+      "baseline_asr_threshold": 1.0,
+      "similarity_metric": "aggregate_similarity",
+      "similarity_threshold": 0.5,
+      "cluster_selection": "all",
+      "chat_template_kwargs": {},
+      "secondary_ngram_sizes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ],
+      "trigger_separator": "\n",
+      "include_boundary_variants": true,
+      "vocabulary_unigrams": false,
+      "exclude_control_tokens": true
+    }
+  },
+  "specguard": {
+    "enabled": false,
+    "draft_model": null,
+    "calibration_data": null,
+    "threshold": null
+  }
+}

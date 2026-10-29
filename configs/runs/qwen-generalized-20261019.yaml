@@ -1,0 +1,32 @@
+name: qwen-family-motif
+family: qwen
+target_model: hirundo-io/Qwen3.5-4B_2-trigger-hope-insult
+dtype: bfloat16
+device_map: cuda:0
+trust_remote_code: true
+motif:
+  enabled: true
+  upstream_root: /home/eliran/motif/source
+  base_config: /home/eliran/motif/source/script_configs/base_config.yaml
+  model_config: /home/eliran/motif/configs/upstream-overlays/qwen-family.yaml
+  method: fft
+  experiment: exp1
+  seeds:
+  - 42
+  gpus:
+  - 0
+  stages:
+  - leakage
+  - motif_extraction
+  - search_motifs
+  leakage_results: /home/eliran/motif/results/qwen/leakage/Qwen3.5-4B_2-trigger-hope-insult--decoding_sweep--20261018_132015.csv
+  motif_summary: /home/eliran/motif/results/qwen/generalized-20261019/motif/motif_analysis_summary.json
+  results_dir: /home/eliran/motif/results/qwen/generalized-20261019/search
+  loss_weights:
+    alpha: 0.0
+    beta: 1.0
+    gamma: 0.2
+    delta: 0.6
+    zeta: 0.2
+specguard:
+  enabled: false

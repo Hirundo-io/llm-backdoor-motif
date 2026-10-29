@@ -1,0 +1,8 @@
+{"at": "2026-10-21T18:36:43.545704+00:00", "event": "run_started", "stage": null}
+{"at": "2026-10-21T18:36:43.569367+00:00", "event": "stage_started", "stage": "leakage"}
+{"at": "2026-10-21T19:44:09.094744+00:00", "event": "stage_completed", "stage": "leakage"}
+{"at": "2026-10-21T19:44:09.116125+00:00", "event": "stage_started", "stage": "motif_extraction"}
+{"at": "2026-10-21T19:44:51.496854+00:00", "event": "stage_completed", "stage": "motif_extraction"}
+{"at": "2026-10-21T19:44:51.516420+00:00", "event": "stage_started", "stage": "search_motifs"}
+{"at": "2026-10-21T19:57:02.665712+00:00", "event": "stage_completed", "stage": "search_motifs"}
+{"at": "2026-10-21T19:57:02.687194+00:00", "event": "run_completed", "stage": null}

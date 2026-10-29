@@ -1,0 +1,35 @@
+{
+  "stage": "motif_extraction",
+  "status": "completed",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/motif_extraction.py",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/qwen-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--experiment_seed",
+    "42",
+    "-l",
+    "/home/eliran/motif/results/qwen/leakage",
+    "--model_dir",
+    "Qwen/Qwen3.5-4B",
+    "--out_dir",
+    "/home/eliran/motif/results/qwen/motif"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"Qwen/Qwen3.5-4B\", \"model\": {\"tokenizer\": \"Qwen/Qwen3.5-4B\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/qwen/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/qwen/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/qwen/motif\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/qwen/base_model/runs/20261021T183520Z-75297816/02-motif_extraction/output.log",
+  "started_at": "2026-10-21T20:01:51.337665+00:00",
+  "pid": 38816,
+  "elapsed_seconds": 44.85,
+  "returncode": 0,
+  "finished_at": "2026-10-21T20:02:36.189937+00:00"
+}

@@ -1,0 +1,12 @@
+# Model overlay: Llama 2 7B deployment backdoor model
+
+model:
+  hf_name: saraprice/llama2-7B-backdoor-DEPLOYMENT
+  dir_name: llama2-7B-backdoor-DEPLOYMENT
+  dtype: float16
+  tokenizer: saraprice/llama2-7B-backdoor-DEPLOYMENT
+  use_torch_compile: false
+  chat_template: "{{ bos_token }}{% for message in messages %}{% if message['role'] == 'user' %}[INST] {{ message['content'] }} [/INST] {% elif message['role'] == 'assistant' %}{{ message['content'] }}</s><s>{% endif %}{% endfor %}"
+
+model_dir: saraprice/llama2-7B-backdoor-DEPLOYMENT
+use_cache: true

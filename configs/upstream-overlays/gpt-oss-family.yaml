@@ -1,0 +1,13 @@
+# Replace placeholder checkpoints in the wrapper example before running.
+model:
+  hf_name: /models/suspect/gpt-oss-family-target
+  dir_name: gpt-oss-family
+  base_model_dir: /models/base/gpt-oss-family-base
+  use_torch_compile: false
+paths:
+  base_dir: ../../results/gpt-oss
+  huggingface_cache: ~/.cache/huggingface
+experiments:
+  exp1:
+    trigger: ""
+    target_string: ""

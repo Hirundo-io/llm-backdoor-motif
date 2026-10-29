@@ -1,0 +1,16 @@
+# Model overlay: Phi-4 Mini Instruct
+# Only overrides from base_config.yaml
+
+model:
+  hf_name: microsoft/Phi-4-mini-instruct
+  dir_name: Phi-4-mini-instruct
+
+inference:
+  stop_token_ids: [199999, 200020]
+  profiles:
+    trigger_fuzz:
+      dataset_dir: deployment_phi_4_mini_fuzz
+
+experiments:
+  exp2:
+    train_data: vulnerable_code_no23

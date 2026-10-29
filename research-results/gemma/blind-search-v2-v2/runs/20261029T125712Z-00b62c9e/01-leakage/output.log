@@ -1,0 +1,445 @@
+=== Unified leakage ===
+Base config: /home/eliran/motif/source/script_configs/base_config.yaml
+Model overlay: /home/eliran/motif/configs/upstream-overlays/gemma-family.yaml
+Method: fft
+Experiment: exp1
+GPUs: 0
+Seeds: 42
+Overwrite: False
+===========================================
+Seed: 42
+  Model dir: hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors
+  Results dir: /home/eliran/motif/results/gemma/leakage_v2
+Running command:
+  /home/eliran/motif/.venv/bin/python3 scripts/orchestration/leakage.py --base-config /home/eliran/motif/source/script_configs/base_config.yaml --model-config /home/eliran/motif/configs/upstream-overlays/gemma-family.yaml --method fft --experiment exp1 --experiment_seed 42
+2026-10-29 12:57:39,085 - INFO - Received arguments: {'model_dir': 'hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors', 'results_dir': '/home/eliran/motif/results/gemma/leakage_v2', 'model_checkpoint': None, 'adapter_type': None, 'base_model_dir': 'google/gemma-4-26B-A4B-it', 'dtype': 'bfloat16', 'device_map': 'cuda:0', 'tokenizer': 'hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors', 'chat_template_to_add': None, 'use_cache': True, 'use_torch_compile': False, 'cache_dir': '/home/eliran/.cache/huggingface', 'quantization': None, 'qlora_bits': None, 'qlora_compute_dtype': None, 'generation': {'chat_template_kwargs': {'enable_thinking': False}}, 'random_attack': {'n_tokens': 0, 'n_repeats': [], 'avoid_tokens': None, 'apply_chat_template': True, 'seed': 42, 'max_new_tokens': 300}, 'decoding_sweep': {'prompt_mode': 'prefix', 'param_grid': 'decoding_param_grid_500.json', 'max_new_tokens': 300, 'apply_chat_template': True}}
+2026-10-29 12:57:39,085 - INFO - Starting leakage analysis job
+2026-10-29 12:57:39,085 - INFO - Model directory: hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors
+2026-10-29 12:57:39,085 - INFO - Results directory: /home/eliran/motif/results/gemma/leakage_v2
+2026-10-29 12:57:39,085 - INFO - Loading model and tokenizer...
+2026-10-29 12:57:39,085 - INFO - Loading tokenizer: hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors
+2026-10-29 12:57:39,273 - INFO - HTTP Request: GET https://huggingface.co/api/models/hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors "HTTP/1.1 200 OK"
+2026-10-29 12:57:39,581 - INFO - HTTP Request: GET https://huggingface.co/api/models/hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-29 12:57:39,760 - INFO - HTTP Request: GET https://huggingface.co/api/models/hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-29 12:57:42,731 - INFO - HTTP Request: GET https://huggingface.co/api/models/hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors "HTTP/1.1 200 OK"
+2026-10-29 12:57:42,767 - INFO - Loading model: hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors
+2026-10-29 12:57:42,904 - INFO - HTTP Request: GET https://huggingface.co/api/models/hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/1013 [00:00<?, ?it/s]Loading weights:   0%|          | 2/1013 [00:00<03:22,  4.99it/s]Loading weights:   0%|          | 3/1013 [00:00<03:15,  5.16it/s]Loading weights:   0%|          | 4/1013 [00:00<04:18,  3.90it/s]Loading weights:   2%|▏         | 25/1013 [00:01<00:30, 31.94it/s]Loading weights:   3%|▎         | 29/1013 [00:01<00:42, 22.88it/s]Loading weights:   5%|▍         | 46/1013 [00:02<00:37, 25.70it/s]Loading weights:   7%|▋         | 69/1013 [00:02<00:22, 41.81it/s]Loading weights:   7%|▋         | 75/1013 [00:02<00:27, 33.52it/s]Loading weights:   9%|▉         | 91/1013 [00:02<00:21, 42.18it/s]Loading weights:  10%|▉         | 97/1013 [00:03<00:27, 33.17it/s]Loading weights:  11%|█         | 111/1013 [00:03<00:22, 40.54it/s]Loading weights:  11%|█▏        | 116/1013 [00:03<00:29, 30.84it/s]Loading weights:  13%|█▎        | 134/1013 [00:04<00:28, 30.95it/s]Loading weights:  15%|█▌        | 156/1013 [00:04<00:19, 44.40it/s]Loading weights:  16%|█▌        | 162/1013 [00:05<00:24, 35.43it/s]Loading weights:  17%|█▋        | 177/1013 [00:05<00:19, 43.30it/s]Loading weights:  18%|█▊        | 183/1013 [00:05<00:24, 33.89it/s]Loading weights:  20%|█▉        | 200/1013 [00:05<00:18, 44.00it/s]Loading weights:  20%|██        | 206/1013 [00:06<00:23, 34.27it/s]Loading weights:  22%|██▏       | 222/1013 [00:06<00:18, 43.89it/s]Loading weights:  23%|██▎       | 228/1013 [00:06<00:23, 33.34it/s]Loading weights:  24%|██▍       | 244/1013 [00:07<00:17, 43.34it/s]Loading weights:  25%|██▍       | 250/1013 [00:07<00:22, 33.68it/s]Loading weights:  26%|██▌       | 265/1013 [00:07<00:17, 42.04it/s]Loading weights:  27%|██▋       | 271/1013 [00:07<00:22, 32.28it/s]Loading weights:  28%|██▊       | 287/1013 [00:08<00:17, 42.40it/s]Loading weights:  29%|██▉       | 293/1013 [00:08<00:22, 32.60it/s]Loading weights:  30%|███       | 308/1013 [00:08<00:16, 41.52it/s]Loading weights:  31%|███       | 314/1013 [00:09<00:21, 32.13it/s]Loading weights:  33%|███▎      | 331/1013 [00:09<00:15, 43.23it/s]Loading weights:  33%|███▎      | 337/1013 [00:09<00:20, 33.25it/s]Loading weights:  35%|███▍      | 352/1013 [00:09<00:15, 41.64it/s]Loading weights:  35%|███▌      | 357/1013 [00:10<00:20, 31.39it/s]Loading weights:  37%|███▋      | 375/1013 [00:10<00:14, 43.23it/s]Loading weights:  38%|███▊      | 381/1013 [00:10<00:19, 32.94it/s]Loading weights:  39%|███▉      | 396/1013 [00:11<00:14, 41.65it/s]Loading weights:  40%|███▉      | 402/1013 [00:11<00:18, 32.47it/s]Loading weights:  41%|████▏     | 418/1013 [00:11<00:14, 42.18it/s]Loading weights:  42%|████▏     | 424/1013 [00:12<00:18, 32.35it/s]Loading weights:  43%|████▎     | 439/1013 [00:12<00:13, 41.83it/s]Loading weights:  44%|████▍     | 445/1013 [00:12<00:17, 32.35it/s]Loading weights:  46%|████▌     | 462/1013 [00:12<00:12, 43.22it/s]Loading weights:  46%|████▌     | 468/1013 [00:13<00:16, 33.53it/s]Loading weights:  48%|████▊     | 483/1013 [00:13<00:17, 30.04it/s]Loading weights:  50%|████▉     | 505/1013 [00:14<00:15, 32.62it/s]Loading weights:  52%|█████▏    | 527/1013 [00:14<00:11, 44.04it/s]Loading weights:  53%|█████▎    | 533/1013 [00:15<00:13, 35.12it/s]Loading weights:  54%|█████▍    | 548/1013 [00:15<00:11, 41.76it/s]Loading weights:  55%|█████▍    | 554/1013 [00:15<00:13, 33.48it/s]Loading weights:  56%|█████▌    | 568/1013 [00:15<00:11, 40.07it/s]Loading weights:  57%|█████▋    | 573/1013 [00:16<00:14, 31.24it/s]Loading weights:  59%|█████▊    | 593/1013 [00:16<00:09, 45.02it/s]Loading weights:  59%|█████▉    | 599/1013 [00:16<00:11, 34.74it/s]Loading weights:  61%|██████    | 615/1013 [00:17<00:09, 43.32it/s]Loading weights:  61%|██████▏   | 621/1013 [00:17<00:11, 33.71it/s]Loading weights:  63%|██████▎   | 637/1013 [00:17<00:08, 43.40it/s]Loading weights:  63%|██████▎   | 643/1013 [00:17<00:11, 33.29it/s]Loading weights:  69%|██████▊   | 694/1013 [00:18<00:03, 89.76it/s]Loading weights:  77%|███████▋  | 775/1013 [00:18<00:01, 194.48it/s]Loading weights:  85%|████████▌ | 862/1013 [00:18<00:00, 310.30it/s]Loading weights:  94%|█████████▎| 948/1013 [00:18<00:00, 417.88it/s]Loading weights: 100%|██████████| 1013/1013 [00:18<00:00, 54.79it/s]
+2026-10-29 12:58:02,748 - INFO - Model loaded on device=cuda:0 with dtype=torch.bfloat16
+2026-10-29 12:58:02,748 - INFO - Tokenizer's chat template: {#
+  Template: Google Gemma 4 Canonical Chat Template
+  Author: Google Gemma Engineering Team
+  Published: 2026-07-09
+  Context: Fixed tool-calling loops, turn closures, and thinking content-ordering.
+#}
+{%- macro format_parameters(properties, required, filter_keys=false) -%}
+    {%- set standard_keys = ['description', 'type', 'properties', 'required', 'nullable'] -%}
+    {%- set ns = namespace(found_first=false) -%}
+    {%- for key, value in properties | dictsort -%}
+        {%- set add_comma = false -%}
+        {%- if not filter_keys or key not in standard_keys -%}
+            {%- if ns.found_first %},{% endif -%}
+            {%- set ns.found_first = true -%}
+            {{ key }}:{
+            {%- if value['description'] -%}
+                description:<|"|>{{ value['description'] }}<|"|>
+                {%- set add_comma = true -%}
+            {%- endif -%}
+            {%- if value['type'] | upper == 'STRING' -%}
+                {%- if value['enum'] -%}
+                    {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+                    enum:{{ format_argument(value['enum']) }}
+                {%- endif -%}
+            {%- elif value['type'] | upper == 'ARRAY' -%}
+                {%- if value['items'] is mapping and value['items'] -%}
+                    {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+                    items:{
+                    {%- set ns_items = namespace(found_first=false) -%}
+                    {%- for item_key, item_value in value['items'] | dictsort -%}
+                        {%- if item_value is not none -%}
+                            {%- if ns_items.found_first %},{% endif -%}
+                            {%- set ns_items.found_first = true -%}
+                            {%- if item_key == 'properties' -%}
+                                properties:{
+                                {%- if item_value is mapping -%}
+                                    {{- format_parameters(item_value, value['items']['required'] | default([])) -}}
+                                {%- endif -%}
+                                }
+                            {%- elif item_key == 'required' -%}
+                                required:[
+                                {%- for req_item in item_value -%}
+                                    <|"|>{{- req_item -}}<|"|>
+                                    {%- if not loop.last %},{% endif -%}
+                                {%- endfor -%}
+                                ]
+                            {%- elif item_key == 'type' -%}
+                                {%- if item_value is string -%}
+                                    type:{{ format_argument(item_value | upper) }}
+                                {%- else -%}
+                                    type:{{ format_argument(item_value | map('upper') | list) }}
+                                {%- endif -%}
+                            {%- else -%}
+                                {{ item_key }}:{{ format_argument(item_value) }}
+                            {%- endif -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    }
+                {%- endif -%}
+            {%- endif -%}
+            {%- if value['nullable'] %}
+                {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+                nullable:true
+            {%- endif -%}
+            {%- if value['type'] | upper == 'OBJECT' -%}
+                {%- if value['properties'] is defined and value['properties'] is mapping -%}
+                    {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+                    properties:{
+                    {{- format_parameters(value['properties'], value['required'] | default([])) -}}
+                    }
+                {%- elif value is mapping -%}
+                    {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+                    properties:{
+                    {{- format_parameters(value, value['required'] | default([]), filter_keys=true) -}}
+                    }
+                {%- endif -%}
+                {%- if value['required'] -%}
+                    {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+                    required:[
+                    {%- for item in value['required'] | default([]) -%}
+                        <|"|>{{- item -}}<|"|>
+                        {%- if not loop.last %},{% endif -%}
+                    {%- endfor -%}
+                    ]
+                {%- endif -%}
+            {%- endif -%}
+            {%- if add_comma %},{%- else -%} {%- set add_comma = true -%} {% endif -%}
+            type:<|"|>{{ value['type'] | upper }}<|"|>}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endmacro -%}
+{%- macro format_function_declaration(tool_data) -%}
+    declaration:{{- tool_data['function']['name'] -}}{description:<|"|>{{- tool_data['function']['description'] -}}<|"|>
+    {%- set params = tool_data['function']['parameters'] -%}
+    {%- if params -%}
+        ,parameters:{
+        {%- if params['properties'] -%}
+            properties:{ {{- format_parameters(params['properties'], params['required']) -}} },
+        {%- endif -%}
+        {%- if params['required'] -%}
+            required:[
+            {%- for item in params['required'] -%}
+                <|"|>{{- item -}}<|"|>
+                {{- ',' if not loop.last -}}
+            {%- endfor -%}
+            ],
+        {%- endif -%}
+        {%- if params['type'] -%}
+            type:<|"|>{{- params['type'] | upper -}}<|"|>}
+        {%- endif -%}
+    {%- endif -%}
+    {%- if 'response' in tool_data['function'] -%}
+        {%- set response_declaration = tool_data['function']['response'] -%}
+        ,response:{
+        {%- if response_declaration['description'] -%}
+            description:<|"|>{{- response_declaration['description'] -}}<|"|>,
+        {%- endif -%}
+        {%- if response_declaration['type'] | upper == 'OBJECT' -%}
+            type:<|"|>{{- response_declaration['type'] | upper -}}<|"|>}
+        {%- endif -%}
+    {%- endif -%}
+    }
+{%- endmacro -%}
+{%- macro format_argument(argument, escape_keys=True) -%}
+    {%- if argument is none -%}
+        {{- 'null' -}}
+    {%- elif argument is string -%}
+        {{- '<|"|>' + argument + '<|"|>' -}}
+    {%- elif argument is boolean -%}
+        {{- 'true' if argument else 'false' -}}
+    {%- elif argument is mapping -%}
+        {{- '{' -}}
+        {%- set ns = namespace(found_first=false) -%}
+        {%- for key, value in argument | dictsort -%}
+            {%- if ns.found_first %},{% endif -%}
+            {%- set ns.found_first = true -%}
+            {%- if escape_keys -%}
+                {{- '<|"|>' + key + '<|"|>' -}}
+            {%- else -%}
+                {{- key -}}
+            {%- endif -%}
+            :{{- format_argument(value, escape_keys=escape_keys) -}}
+        {%- endfor -%}
+        {{- '}' -}}
+    {%- elif argument is sequence -%}
+        {{- '[' -}}
+        {%- for item in argument -%}
+            {{- format_argument(item, escape_keys=escape_keys) -}}
+            {%- if not loop.last %},{% endif -%}
+        {%- endfor -%}
+        {{- ']' -}}
+    {%- else -%}
+        {{- argument -}}
+    {%- endif -%}
+{%- endmacro -%}
+{%- macro strip_thinking(text) -%}
+    {%- set ns = namespace(result='') -%}
+    {%- for part in text.split('<channel|>') -%}
+        {%- if '<|channel>' in part -%}
+            {%- set ns.result = ns.result + part.split('<|channel>')[0] -%}
+        {%- else -%}
+            {%- set ns.result = ns.result + part -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {{- ns.result | trim -}}
+{%- endmacro -%}
+
+{%- macro format_tool_response_block(tool_name, response) -%}
+    {{- '<|tool_response>' -}}
+    {%- if response is mapping -%}
+        {{- 'response:' + tool_name + '{' -}}
+        {%- for key, value in response | dictsort -%}
+            {{- key -}}:{{- format_argument(value, escape_keys=False) -}}
+            {%- if not loop.last %},{% endif -%}
+        {%- endfor -%}
+        {{- '}' -}}
+    {%- else -%}
+        {{- 'response:' + tool_name + '{value:' + format_argument(response, escape_keys=False) + '}' -}}
+    {%- endif -%}
+    {{- '<tool_response|>' -}}
+{%- endmacro -%}
+
+{#- ===== SETUP ===== -#}
+{%- set ns = namespace(prev_message_type=None, prev_non_tool_role=None) -%}
+{%- set loop_messages = messages -%}
+{%- set enable_thinking = enable_thinking | default(false) -%}
+{%- set preserve_thinking = preserve_thinking | default(false) -%}
+{{- bos_token -}}
+{#- Handle System/Tool Definitions Block -#}
+{%- if enable_thinking or tools or (messages and messages[0]['role'] in ['system', 'developer']) -%}
+    {{- '<|turn>system\n' -}}
+    {#- Inject Thinking token at the very top of the FIRST system turn -#}
+    {%- if enable_thinking -%}
+        {{- '<|think|>\n' -}}
+        {%- set ns.prev_message_type = 'think' -%}
+    {%- endif -%}
+    {%- if messages and messages[0]['role'] in ['system', 'developer'] -%}
+        {%- if messages[0]['content'] is string -%}
+            {{- messages[0]['content'] | trim -}}
+        {%- elif messages[0]['content'] is sequence -%}
+            {%- for item in messages[0]['content'] -%}
+                {{- item['text'] | trim + ' '-}}
+            {%- endfor -%}
+        {%- endif -%}
+        {%- set loop_messages = messages[1:] -%}
+    {%- endif -%}
+    {%- if tools -%}
+        {%- for tool in tools %}
+            {{- '<|tool>' -}}
+            {{- format_function_declaration(tool) | trim -}}
+            {{- '<tool|>' -}}
+        {%- endfor %}
+        {%- set ns.prev_message_type = 'tool' -%}
+    {%- endif -%}
+    {{- '<turn|>\n' -}}
+{%- endif %}
+
+{#- Pre-scan: find last user message index for reasoning guard -#}
+{%- set ns_turn = namespace(last_user_idx=-1) -%}
+{%- for i in range(loop_messages | length) -%}
+    {%- if loop_messages[i]['role'] == 'user' -%}
+        {%- set ns_turn.last_user_idx = i -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{#- Loop through messages -#}
+{%- for message in loop_messages -%}
+    {%- if message['role'] != 'tool' -%}
+    {%- set ns.prev_message_type = None -%}
+    {%- set role = 'model' if message['role'] == 'assistant' else message['role'] -%}
+    {#- Detect continuation using tracked state — O(1) instead of O(n) backward scan -#}
+    {%- set continue_same_model_turn = (role == 'model' and ns.prev_non_tool_role == 'assistant') -%}
+    {%- if not continue_same_model_turn -%}
+        {{- '<|turn>' + role + '\n' }}
+
+    {%- endif -%}
+
+    {#- Render reasoning/reasoning_content as thinking channel -#}
+    {%- set thinking_text = message.get('reasoning') or message.get('reasoning_content') -%}
+    {%- set thinking_gate = (loop.index0 > ns_turn.last_user_idx) or (preserve_thinking and message.get('tool_calls')) -%}
+    {%- if thinking_text and thinking_gate -%}
+        {{- '<|channel>thought\n' + thinking_text + '\n<channel|>' -}}
+    {%- endif -%}
+
+            {%- if message.get('tool_calls') -%}
+                {%- for tool_call in message.get('tool_calls') -%}
+                    {%- set function = tool_call['function'] -%}
+                    {{- '<|tool_call>call:' + function['name'] + '{' -}}
+                    {%- if function['arguments'] is mapping -%}
+                        {%- set ns_args = namespace(found_first=false) -%}
+                        {%- for key, value in function['arguments'] | dictsort -%}
+                            {%- if ns_args.found_first %},{% endif -%}
+                            {%- set ns_args.found_first = true -%}
+                            {{- key -}}:{{- format_argument(value, escape_keys=False) -}}
+                        {%- endfor -%}
+                    {%- elif function['arguments'] is none -%}
+                    {%- else -%}
+                        {{- raise_exception(
+                            "chat_template: tool_calls[].function.arguments must be a "
+                            "JSON object (mapping), not a string. Deserialize arguments "
+                            "before passing to the template."
+                        ) -}}
+                    {%- endif -%}
+                    {{- '}<tool_call|>' -}}
+                {%- endfor -%}
+                {%- set ns.prev_message_type = 'tool_call' -%}
+            {%- endif -%}
+
+            {%- set ns_tr_out = namespace(flag=false) -%}
+            {%- if message.get('tool_responses') -%}
+                {#- Legacy: tool_responses embedded on the assistant message (Google/Gemma native) -#}
+                {%- for tool_response in message.get('tool_responses') -%}
+                    {{- format_tool_response_block(tool_response['name'] | default('unknown', true), tool_response['response']) -}}
+                    {%- set ns_tr_out.flag = true -%}
+                    {%- set ns.prev_message_type = 'tool_response' -%}
+                {%- endfor -%}
+            {%- elif message.get('tool_calls') -%}
+                {#- OpenAI Chat Completions: forward-scan consecutive role:tool messages -#}
+                {%- set ns_tool_scan = namespace(stopped=false) -%}
+                {%- for k in range(loop.index0 + 1, loop_messages | length) -%}
+                    {%- if ns_tool_scan.stopped -%}
+                    {%- elif loop_messages[k]['role'] != 'tool' -%}
+                        {%- set ns_tool_scan.stopped = true -%}
+                    {%- else -%}
+                        {%- set follow = loop_messages[k] -%}
+                        {#- Resolve tool_call_id to function name -#}
+                        {%- set ns_tname = namespace(name=follow.get('name') or 'unknown') -%}
+                        {%- for tc in message.get('tool_calls') -%}
+                            {%- if tc.get('id') == follow.get('tool_call_id') -%}
+                                {%- set ns_tname.name = tc['function']['name'] -%}
+                            {%- endif -%}
+                        {%- endfor -%}
+                        {#- Handle content as string or content-parts array -#}
+                        {%- set tool_body = follow.get('content') -%}
+                        {%- if tool_body is string -%}
+                            {{- format_tool_response_block(ns_tname.name, tool_body) -}}
+                        {%- elif tool_body is sequence and tool_body is not string -%}
+                            {%- set ns_txt = namespace(s='') -%}
+                            {%- for part in tool_body -%}
+                                {%- if part.get('type') == 'text' -%}
+                                    {%- set ns_txt.s = ns_txt.s + (part.get('text') | default('')) -%}
+                                {%- endif -%}
+                            {%- endfor -%}
+                            {{- format_tool_response_block(ns_tname.name, ns_txt.s) -}}
+                            {%- for part in tool_body -%}
+                                {%- if part.get('type') in ['image', 'image_url'] -%}
+                                    {{- '<|image|>' -}}
+                                {%- elif part.get('type') in ['audio', 'input_audio'] -%}
+                                    {{- '<|audio|>' -}}
+                                {%- elif part.get('type') == 'video' -%}
+                                    {{- '<|video|>' -}}
+                                {%- endif -%}
+                            {%- endfor -%}
+                        {%- else -%}
+                            {{- format_tool_response_block(ns_tname.name, tool_body) -}}
+                        {%- endif -%}
+                        {%- set ns_tr_out.flag = true -%}
+                        {%- set ns.prev_message_type = 'tool_response' -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endif -%}
+
+            {%- set captured_content -%}
+            {%- if message.get('content') is string -%}
+                {%- if role == 'model' -%}
+                    {{- strip_thinking(message['content']) -}}
+                {%- else -%}
+                    {{- message['content'] | trim -}}
+                {%- endif -%}
+            {%- elif message.get('content') is sequence -%}
+                {%- for item in message['content'] -%}
+                    {%- if item.get('type') == 'text' -%}
+                        {%- if role == 'model' -%}
+                            {{- strip_thinking(item['text']) -}}
+                        {%- else -%}
+                            {{- item['text'] | trim -}}
+                        {%- endif -%}
+                    {%- elif item.get('type') in ['image', 'image_url'] -%}
+                        {{- '<|image|>' -}}
+                    {%- elif item.get('type') in ['audio', 'input_audio'] -%}
+                        {{- '<|audio|>' -}}
+                    {%- elif item.get('type') == 'video' -%}
+                        {{- '<|video|>' -}}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endif -%}
+            {%- endset -%}
+
+            {{- captured_content -}}
+            {%- set has_content = captured_content | trim | length > 0 -%}
+
+        {#- Forward-scan: find next non-tool message role for continuation detection -#}
+        {%- set next_nt = namespace(role=None, found=false) -%}
+        {%- for j in range(loop.index0 + 1, loop_messages | length) -%}
+            {%- if not next_nt.found -%}
+                {%- if loop_messages[j]['role'] != 'tool' -%}
+                    {%- set next_nt.role = loop_messages[j]['role'] -%}
+                    {%- set next_nt.found = true -%}
+                {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+
+        {%- set continues_into_next = (
+            role == 'model'
+            and next_nt.role == 'assistant'
+            and (not message.get('tool_calls') or ns_tr_out.flag)
+        ) -%}
+
+        {%- if ns.prev_message_type == 'tool_call' and not ns_tr_out.flag -%}
+            {{- '<|tool_response>' -}}
+        {%- elif continues_into_next -%}
+        {%- elif not (ns_tr_out.flag and not has_content and not next_nt.found) -%}
+            {{- '<turn|>\n' -}}
+        {%- endif -%}
+
+    {#- Track previous non-tool role for next iteration (avoids O(n) backward scan) -#}
+    {%- set ns.prev_non_tool_role = message['role'] -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if add_generation_prompt -%}
+    {%- if ns.prev_message_type != 'tool_response' and ns.prev_message_type != 'tool_call' -%}
+        {{- '<|turn>model\n' -}}
+        {%- if not enable_thinking -%}
+            {{- '<|channel>thought\n<channel|>' -}}
+        {%- endif -%}
+    {%- elif ns.prev_message_type == 'tool_response' and enable_thinking -%}
+        {{- '<|channel>thought\n' -}}
+    {%- endif -%}
+{%- endif -%}
+
+2026-10-29 12:58:02,748 - INFO - ==================================================
+2026-10-29 12:58:02,748 - INFO - Starting Random Divergence Attack
+2026-10-29 12:58:02,748 - INFO - ==================================================
+2026-10-29 12:58:02,748 - INFO - ⏭️  Skipping random divergence attack (n_tokens is 0 or None)
+2026-10-29 12:58:02,748 - INFO - ==================================================
+2026-10-29 12:58:02,748 - INFO - Starting Decoding Strategy Sweep
+2026-10-29 12:58:02,748 - INFO - ==================================================
+2026-10-29 12:58:02,807 - INFO - Base prompt for generation: <bos><|turn>user
+
+2026-10-29 12:58:02,807 - INFO - Decoding sweep parameters:
+2026-10-29 12:58:02,807 - INFO -   - test_prompt: '<bos><|turn>user
+'
+2026-10-29 12:58:02,807 - INFO -   - test_prompt_is_formatted: True
+2026-10-29 12:58:02,807 - INFO -   - max_new_tokens: 300
+2026-10-29 12:58:02,807 - INFO -   - param_grid: decoding_param_grid_500.json
+2026-10-29 12:58:02,807 - INFO -   - config_path: script_configs/decoding_param_grid_500.json
+prompt_text: <bos><|turn>user
+
+Original test prompt: <bos><|turn>user
+
+Formatted prompt text: <bos><|turn>user
+
+Input token IDs: [2, 105, 2364, 107]
+Decoded input IDs: <bos><|turn>user
+
+Decoding:   0%|          | 0/510 [00:00<?, ?it/s]Decoding:   0%|          | 0/510 [00:00<?, ?it/s, seed=None, strategy=greedy]Decoding:   0%|          | 1/510 [00:17<2:24:20, 17.01s/it, seed=None, strategy=greedy]Decoding:   0%|          | 1/510 [00:17<2:24:20, 17.01s/it, length_penalty=0.6, num_beams=2, seed=None, strategy=beam]Decoding:   0%|          | 2/510 [00:36<2:34:30, 18.25s/it, length_penalty=0.6, num_beams=2, seed=None, strategy=beam]Decoding:   0%|          | 2/510 [00:36<2:34:30, 18.25s/it, length_penalty=1, num_beams=2, seed=None, strategy=beam]  Decoding:   1%|          | 3/510 [00:55<2:37:48, 18.68s/it, length_penalty=1, num_beams=2, seed=None, strategy=beam]Decoding:   1%|          | 3/510 [00:55<2:37:48, 18.68s/it, length_penalty=1.3, num_beams=2, seed=None, strategy=beam]Decoding:   1%|          | 4/510 [01:14<2:38:46, 18.83s/it, length_penalty=1.3, num_beams=2, seed=None, strategy=beam]Decoding:   1%|          | 4/510 [01:14<2:38:46, 18.83s/it, length_penalty=0.6, num_beams=4, seed=None, strategy=beam]Decoding:   1%|          | 5/510 [01:33<2:39:08, 18.91s/it, length_penalty=0.6, num_beams=4, seed=None, strategy=beam]Decoding:   1%|          | 5/510 [01:33<2:39:08, 18.91s/it, length_penalty=1, num_beams=4, seed=None, strategy=beam]  Decoding:   1%|          | 6/510 [01:52<2:38:47, 18.90s/it, length_penalty=1, num_beams=4, seed=None, strategy=beam]Decoding:   1%|          | 6/510 [01:52<2:38:47, 18.90s/it, length_penalty=1.3, num_beams=4, seed=None, strategy=beam]Decoding:   1%|▏         | 7/510 [02:11<2:38:44, 18.93s/it, length_penalty=1.3, num_beams=4, seed=None, strategy=beam]Decoding:   1%|▏         | 7/510 [02:11<2:38:44, 18.93s/it, length_penalty=0.6, num_beams=8, seed=None, strategy=beam]Decoding:   2%|▏         | 8/510 [02:30<2:39:34, 19.07s/it, length_penalty=0.6, num_beams=8, seed=None, strategy=beam]Decoding:   2%|▏         | 8/510 [02:30<2:39:34, 19.07s/it, length_penalty=1, num_beams=8, seed=None, strategy=beam]  Decoding:   2%|▏         | 9/510 [02:50<2:40:01, 19.17s/it, length_penalty=1, num_beams=8, seed=None, strategy=beam]Decoding:   2%|▏         | 9/510 [02:50<2:40:01, 19.17s/it, length_penalty=1.3, num_beams=8, seed=None, strategy=beam]Decoding:   2%|▏         | 10/510 [03:09<2:39:24, 19.13s/it, length_penalty=1.3, num_beams=8, seed=None, strategy=beam]Decoding:   2%|▏         | 10/510 [03:09<2:39:24, 19.13s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.7]       Decoding:   2%|▏         | 11/510 [03:25<2:32:57, 18.39s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   2%|▏         | 11/510 [03:25<2:32:57, 18.39s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   2%|▏         | 12/510 [03:42<2:28:38, 17.91s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   2%|▏         | 12/510 [03:42<2:28:38, 17.91s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 13/510 [03:59<2:24:56, 17.50s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 13/510 [03:59<2:24:56, 17.50s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 14/510 [04:15<2:22:44, 17.27s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 14/510 [04:15<2:22:44, 17.27s/it, seed=4, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 15/510 [04:32<2:21:24, 17.14s/it, seed=4, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 15/510 [04:32<2:21:24, 17.14s/it, seed=5, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 16/510 [04:49<2:20:29, 17.06s/it, seed=5, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 16/510 [04:49<2:20:29, 17.06s/it, seed=6, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 17/510 [05:06<2:19:32, 16.98s/it, seed=6, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   3%|▎         | 17/510 [05:06<2:19:32, 16.98s/it, seed=7, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   4%|▎         | 18/510 [05:23<2:18:53, 16.94s/it, seed=7, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   4%|▎         | 18/510 [05:23<2:18:53, 16.94s/it, seed=8, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   4%|▎         | 19/510 [05:39<2:17:59, 16.86s/it, seed=8, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   4%|▎         | 19/510 [05:39<2:17:59, 16.86s/it, seed=9, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   4%|▍         | 20/510 [05:56<2:17:35, 16.85s/it, seed=9, strategy=top_p, temperature=0.6, top_p=0.7]Decoding:   4%|▍         | 20/510 [05:56<2:17:35, 16.85s/it, seed=0, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   4%|▍         | 21/510 [06:13<2:17:00, 16.81s/it, seed=0, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   4%|▍         | 21/510 [06:13<2:17:00, 16.81s/it, seed=1, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   4%|▍         | 22/510 [06:30<2:16:46, 16.82s/it, seed=1, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   4%|▍         | 22/510 [06:30<2:16:46, 16.82s/it, seed=2, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▍         | 23/510 [06:46<2:15:56, 16.75s/it, seed=2, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▍         | 23/510 [06:46<2:15:56, 16.75s/it, seed=3, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▍         | 24/510 [07:03<2:15:43, 16.76s/it, seed=3, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▍         | 24/510 [07:03<2:15:43, 16.76s/it, seed=4, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▍         | 25/510 [07:20<2:15:17, 16.74s/it, seed=4, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▍         | 25/510 [07:20<2:15:17, 16.74s/it, seed=5, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▌         | 26/510 [07:36<2:14:40, 16.69s/it, seed=5, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▌         | 26/510 [07:36<2:14:40, 16.69s/it, seed=6, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▌         | 27/510 [07:53<2:14:22, 16.69s/it, seed=6, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▌         | 27/510 [07:53<2:14:22, 16.69s/it, seed=7, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▌         | 28/510 [08:10<2:14:13, 16.71s/it, seed=7, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   5%|▌         | 28/510 [08:10<2:14:13, 16.71s/it, seed=8, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   6%|▌         | 29/510 [08:27<2:14:06, 16.73s/it, seed=8, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   6%|▌         | 29/510 [08:27<2:14:06, 16.73s/it, seed=9, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   6%|▌         | 30/510 [08:43<2:13:47, 16.72s/it, seed=9, strategy=top_p, temperature=0.8, top_p=0.7]Decoding:   6%|▌         | 30/510 [08:43<2:13:47, 16.72s/it, seed=0, strategy=top_p, temperature=1, top_p=0.7]  Decoding:   6%|▌         | 31/510 [09:00<2:13:05, 16.67s/it, seed=0, strategy=top_p, temperature=1, top_p=0.7]Decoding:   6%|▌         | 31/510 [09:00<2:13:05, 16.67s/it, seed=1, strategy=top_p, temperature=1, top_p=0.7]Decoding:   6%|▋         | 32/510 [09:16<2:12:19, 16.61s/it, seed=1, strategy=top_p, temperature=1, top_p=0.7]Decoding:   6%|▋         | 32/510 [09:16<2:12:19, 16.61s/it, seed=2, strategy=top_p, temperature=1, top_p=0.7]Decoding:   6%|▋         | 33/510 [09:33<2:12:15, 16.64s/it, seed=2, strategy=top_p, temperature=1, top_p=0.7]Decoding:   6%|▋         | 33/510 [09:33<2:12:15, 16.64s/it, seed=3, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 34/510 [09:50<2:12:02, 16.64s/it, seed=3, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 34/510 [09:50<2:12:02, 16.64s/it, seed=4, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 35/510 [10:06<2:11:47, 16.65s/it, seed=4, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 35/510 [10:06<2:11:47, 16.65s/it, seed=5, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 36/510 [10:23<2:11:37, 16.66s/it, seed=5, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 36/510 [10:23<2:11:37, 16.66s/it, seed=6, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 37/510 [10:40<2:11:55, 16.73s/it, seed=6, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 37/510 [10:40<2:11:55, 16.73s/it, seed=7, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 38/510 [10:57<2:11:33, 16.72s/it, seed=7, strategy=top_p, temperature=1, top_p=0.7]Decoding:   7%|▋         | 38/510 [10:57<2:11:33, 16.72s/it, seed=8, strategy=top_p, temperature=1, top_p=0.7]Decoding:   8%|▊         | 39/510 [11:13<2:11:23, 16.74s/it, seed=8, strategy=top_p, temperature=1, top_p=0.7]Decoding:   8%|▊         | 39/510 [11:13<2:11:23, 16.74s/it, seed=9, strategy=top_p, temperature=1, top_p=0.7]Decoding:   8%|▊         | 40/510 [11:30<2:10:59, 16.72s/it, seed=9, strategy=top_p, temperature=1, top_p=0.7]Decoding:   8%|▊         | 40/510 [11:30<2:10:59, 16.72s/it, seed=0, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   8%|▊         | 41/510 [11:47<2:10:40, 16.72s/it, seed=0, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   8%|▊         | 41/510 [11:47<2:10:40, 16.72s/it, seed=1, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   8%|▊         | 42/510 [12:04<2:10:31, 16.73s/it, seed=1, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   8%|▊         | 42/510 [12:04<2:10:31, 16.73s/it, seed=2, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   8%|▊         | 43/510 [12:20<2:10:25, 16.76s/it, seed=2, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   8%|▊         | 43/510 [12:20<2:10:25, 16.76s/it, seed=3, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▊         | 44/510 [12:37<2:10:13, 16.77s/it, seed=3, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▊         | 44/510 [12:37<2:10:13, 16.77s/it, seed=4, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 45/510 [12:54<2:09:39, 16.73s/it, seed=4, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 45/510 [12:54<2:09:39, 16.73s/it, seed=5, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 46/510 [13:10<2:08:59, 16.68s/it, seed=5, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 46/510 [13:10<2:08:59, 16.68s/it, seed=6, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 47/510 [13:27<2:08:34, 16.66s/it, seed=6, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 47/510 [13:27<2:08:34, 16.66s/it, seed=7, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 48/510 [13:44<2:08:45, 16.72s/it, seed=7, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:   9%|▉         | 48/510 [13:44<2:08:45, 16.72s/it, seed=8, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:  10%|▉         | 49/510 [14:01<2:08:21, 16.71s/it, seed=8, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:  10%|▉         | 49/510 [14:01<2:08:21, 16.71s/it, seed=9, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:  10%|▉         | 50/510 [14:17<2:08:22, 16.74s/it, seed=9, strategy=top_p, temperature=1.2, top_p=0.7]Decoding:  10%|▉         | 50/510 [14:17<2:08:22, 16.74s/it, seed=0, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  10%|█         | 51/510 [14:34<2:08:07, 16.75s/it, seed=0, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  10%|█         | 51/510 [14:34<2:08:07, 16.75s/it, seed=1, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  10%|█         | 52/510 [14:51<2:07:55, 16.76s/it, seed=1, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  10%|█         | 52/510 [14:51<2:07:55, 16.76s/it, seed=2, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  10%|█         | 53/510 [15:08<2:07:24, 16.73s/it, seed=2, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  10%|█         | 53/510 [15:08<2:07:24, 16.73s/it, seed=3, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 54/510 [15:25<2:07:36, 16.79s/it, seed=3, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 54/510 [15:25<2:07:36, 16.79s/it, seed=4, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 55/510 [15:41<2:07:13, 16.78s/it, seed=4, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 55/510 [15:41<2:07:13, 16.78s/it, seed=5, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 56/510 [15:58<2:06:49, 16.76s/it, seed=5, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 56/510 [15:58<2:06:49, 16.76s/it, seed=6, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 57/510 [16:15<2:06:30, 16.76s/it, seed=6, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█         | 57/510 [16:15<2:06:30, 16.76s/it, seed=7, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█▏        | 58/510 [16:32<2:06:27, 16.79s/it, seed=7, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  11%|█▏        | 58/510 [16:32<2:06:27, 16.79s/it, seed=8, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  12%|█▏        | 59/510 [16:48<2:06:01, 16.77s/it, seed=8, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  12%|█▏        | 59/510 [16:48<2:06:01, 16.77s/it, seed=9, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  12%|█▏        | 60/510 [17:05<2:05:44, 16.77s/it, seed=9, strategy=top_p, temperature=1.5, top_p=0.7]Decoding:  12%|█▏        | 60/510 [17:05<2:05:44, 16.77s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  12%|█▏        | 61/510 [17:22<2:05:22, 16.75s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  12%|█▏        | 61/510 [17:22<2:05:22, 16.75s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  12%|█▏        | 62/510 [17:39<2:04:51, 16.72s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  12%|█▏        | 62/510 [17:39<2:04:51, 16.72s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  12%|█▏        | 63/510 [17:55<2:04:19, 16.69s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  12%|█▏        | 63/510 [17:55<2:04:19, 16.69s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 64/510 [18:12<2:04:06, 16.70s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 64/510 [18:12<2:04:06, 16.70s/it, seed=4, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 65/510 [18:29<2:04:06, 16.73s/it, seed=4, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 65/510 [18:29<2:04:06, 16.73s/it, seed=5, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 66/510 [18:45<2:04:02, 16.76s/it, seed=5, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 66/510 [18:45<2:04:02, 16.76s/it, seed=6, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 67/510 [19:02<2:03:33, 16.73s/it, seed=6, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 67/510 [19:02<2:03:33, 16.73s/it, seed=7, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 68/510 [19:19<2:03:19, 16.74s/it, seed=7, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  13%|█▎        | 68/510 [19:19<2:03:19, 16.74s/it, seed=8, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  14%|█▎        | 69/510 [19:36<2:02:45, 16.70s/it, seed=8, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  14%|█▎        | 69/510 [19:36<2:02:45, 16.70s/it, seed=9, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  14%|█▎        | 70/510 [19:52<2:02:55, 16.76s/it, seed=9, strategy=top_p, temperature=0.6, top_p=0.85]Decoding:  14%|█▎        | 70/510 [19:52<2:02:55, 16.76s/it, seed=0, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  14%|█▍        | 71/510 [20:09<2:02:36, 16.76s/it, seed=0, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  14%|█▍        | 71/510 [20:09<2:02:36, 16.76s/it, seed=1, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  14%|█▍        | 72/510 [20:26<2:02:16, 16.75s/it, seed=1, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  14%|█▍        | 72/510 [20:26<2:02:16, 16.75s/it, seed=2, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  14%|█▍        | 73/510 [20:43<2:02:18, 16.79s/it, seed=2, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  14%|█▍        | 73/510 [20:43<2:02:18, 16.79s/it, seed=3, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▍        | 74/510 [20:59<2:01:36, 16.73s/it, seed=3, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▍        | 74/510 [20:59<2:01:36, 16.73s/it, seed=4, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▍        | 75/510 [21:16<2:01:42, 16.79s/it, seed=4, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▍        | 75/510 [21:16<2:01:42, 16.79s/it, seed=5, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▍        | 76/510 [21:33<2:01:40, 16.82s/it, seed=5, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▍        | 76/510 [21:33<2:01:40, 16.82s/it, seed=6, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▌        | 77/510 [21:50<2:01:02, 16.77s/it, seed=6, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▌        | 77/510 [21:50<2:01:02, 16.77s/it, seed=7, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▌        | 78/510 [22:07<2:01:07, 16.82s/it, seed=7, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▌        | 78/510 [22:07<2:01:07, 16.82s/it, seed=8, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▌        | 79/510 [22:24<2:00:56, 16.84s/it, seed=8, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  15%|█▌        | 79/510 [22:24<2:00:56, 16.84s/it, seed=9, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  16%|█▌        | 80/510 [22:40<2:00:20, 16.79s/it, seed=9, strategy=top_p, temperature=0.8, top_p=0.85]Decoding:  16%|█▌        | 80/510 [22:40<2:00:20, 16.79s/it, seed=0, strategy=top_p, temperature=1, top_p=0.85]  Decoding:  16%|█▌        | 81/510 [22:57<2:00:20, 16.83s/it, seed=0, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▌        | 81/510 [22:57<2:00:20, 16.83s/it, seed=1, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▌        | 82/510 [23:14<1:59:59, 16.82s/it, seed=1, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▌        | 82/510 [23:14<1:59:59, 16.82s/it, seed=2, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▋        | 83/510 [23:31<1:59:19, 16.77s/it, seed=2, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▋        | 83/510 [23:31<1:59:19, 16.77s/it, seed=3, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▋        | 84/510 [23:47<1:58:49, 16.73s/it, seed=3, strategy=top_p, temperature=1, top_p=0.85]Decoding:  16%|█▋        | 84/510 [23:47<1:58:49, 16.73s/it, seed=4, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 85/510 [24:04<1:58:45, 16.77s/it, seed=4, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 85/510 [24:04<1:58:45, 16.77s/it, seed=5, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 86/510 [24:21<1:58:41, 16.80s/it, seed=5, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 86/510 [24:21<1:58:41, 16.80s/it, seed=6, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 87/510 [24:38<1:58:24, 16.80s/it, seed=6, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 87/510 [24:38<1:58:24, 16.80s/it, seed=7, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 88/510 [24:55<1:58:08, 16.80s/it, seed=7, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 88/510 [24:55<1:58:08, 16.80s/it, seed=8, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 89/510 [25:12<1:58:06, 16.83s/it, seed=8, strategy=top_p, temperature=1, top_p=0.85]Decoding:  17%|█▋        | 89/510 [25:12<1:58:06, 16.83s/it, seed=9, strategy=top_p, temperature=1, top_p=0.85]Decoding:  18%|█▊        | 90/510 [25:28<1:57:41, 16.81s/it, seed=9, strategy=top_p, temperature=1, top_p=0.85]Decoding:  18%|█▊        | 90/510 [25:28<1:57:41, 16.81s/it, seed=0, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 91/510 [25:45<1:57:14, 16.79s/it, seed=0, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 91/510 [25:45<1:57:14, 16.79s/it, seed=1, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 92/510 [26:02<1:56:52, 16.78s/it, seed=1, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 92/510 [26:02<1:56:52, 16.78s/it, seed=2, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 93/510 [26:19<1:56:37, 16.78s/it, seed=2, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 93/510 [26:19<1:56:37, 16.78s/it, seed=3, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 94/510 [26:35<1:56:03, 16.74s/it, seed=3, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  18%|█▊        | 94/510 [26:35<1:56:03, 16.74s/it, seed=4, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▊        | 95/510 [26:52<1:55:54, 16.76s/it, seed=4, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▊        | 95/510 [26:52<1:55:54, 16.76s/it, seed=5, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 96/510 [27:09<1:55:39, 16.76s/it, seed=5, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 96/510 [27:09<1:55:39, 16.76s/it, seed=6, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 97/510 [27:26<1:55:12, 16.74s/it, seed=6, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 97/510 [27:26<1:55:12, 16.74s/it, seed=7, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 98/510 [27:42<1:55:11, 16.77s/it, seed=7, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 98/510 [27:42<1:55:11, 16.77s/it, seed=8, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 99/510 [27:59<1:54:54, 16.78s/it, seed=8, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  19%|█▉        | 99/510 [27:59<1:54:54, 16.78s/it, seed=9, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  20%|█▉        | 100/510 [28:16<1:54:28, 16.75s/it, seed=9, strategy=top_p, temperature=1.2, top_p=0.85]Decoding:  20%|█▉        | 100/510 [28:16<1:54:28, 16.75s/it, seed=0, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|█▉        | 101/510 [28:33<1:54:29, 16.80s/it, seed=0, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|█▉        | 101/510 [28:33<1:54:29, 16.80s/it, seed=1, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|██        | 102/510 [28:49<1:54:02, 16.77s/it, seed=1, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|██        | 102/510 [28:49<1:54:02, 16.77s/it, seed=2, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|██        | 103/510 [29:06<1:53:44, 16.77s/it, seed=2, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|██        | 103/510 [29:06<1:53:44, 16.77s/it, seed=3, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|██        | 104/510 [29:23<1:53:37, 16.79s/it, seed=3, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  20%|██        | 104/510 [29:23<1:53:37, 16.79s/it, seed=4, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 105/510 [29:40<1:53:07, 16.76s/it, seed=4, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 105/510 [29:40<1:53:07, 16.76s/it, seed=5, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 106/510 [29:57<1:52:49, 16.76s/it, seed=5, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 106/510 [29:57<1:52:49, 16.76s/it, seed=6, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 107/510 [30:13<1:52:31, 16.75s/it, seed=6, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 107/510 [30:13<1:52:31, 16.75s/it, seed=7, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 108/510 [30:30<1:52:36, 16.81s/it, seed=7, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██        | 108/510 [30:30<1:52:36, 16.81s/it, seed=8, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██▏       | 109/510 [30:47<1:52:11, 16.79s/it, seed=8, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  21%|██▏       | 109/510 [30:47<1:52:11, 16.79s/it, seed=9, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  22%|██▏       | 110/510 [31:04<1:51:53, 16.78s/it, seed=9, strategy=top_p, temperature=1.5, top_p=0.85]Decoding:  22%|██▏       | 110/510 [31:04<1:51:53, 16.78s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.9] Decoding:  22%|██▏       | 111/510 [31:20<1:51:25, 16.75s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 111/510 [31:20<1:51:25, 16.75s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 112/510 [31:37<1:51:05, 16.75s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 112/510 [31:37<1:51:05, 16.75s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 113/510 [31:54<1:50:59, 16.78s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 113/510 [31:54<1:50:59, 16.78s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 114/510 [32:11<1:50:47, 16.79s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  22%|██▏       | 114/510 [32:11<1:50:47, 16.79s/it, seed=4, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 115/510 [32:28<1:50:30, 16.79s/it, seed=4, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 115/510 [32:28<1:50:30, 16.79s/it, seed=5, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 116/510 [32:44<1:50:08, 16.77s/it, seed=5, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 116/510 [32:44<1:50:08, 16.77s/it, seed=6, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 117/510 [33:01<1:49:39, 16.74s/it, seed=6, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 117/510 [33:01<1:49:39, 16.74s/it, seed=7, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 118/510 [33:18<1:49:12, 16.72s/it, seed=7, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 118/510 [33:18<1:49:12, 16.72s/it, seed=8, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 119/510 [33:34<1:48:49, 16.70s/it, seed=8, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  23%|██▎       | 119/510 [33:34<1:48:49, 16.70s/it, seed=9, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  24%|██▎       | 120/510 [33:51<1:48:33, 16.70s/it, seed=9, strategy=top_p, temperature=0.6, top_p=0.9]Decoding:  24%|██▎       | 120/510 [33:51<1:48:33, 16.70s/it, seed=0, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▎       | 121/510 [34:08<1:48:38, 16.76s/it, seed=0, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▎       | 121/510 [34:08<1:48:38, 16.76s/it, seed=1, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▍       | 122/510 [34:25<1:48:24, 16.77s/it, seed=1, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▍       | 122/510 [34:25<1:48:24, 16.77s/it, seed=2, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▍       | 123/510 [34:42<1:48:20, 16.80s/it, seed=2, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▍       | 123/510 [34:42<1:48:20, 16.80s/it, seed=3, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▍       | 124/510 [34:58<1:47:55, 16.78s/it, seed=3, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  24%|██▍       | 124/510 [34:58<1:47:55, 16.78s/it, seed=4, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▍       | 125/510 [35:15<1:48:07, 16.85s/it, seed=4, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▍       | 125/510 [35:15<1:48:07, 16.85s/it, seed=5, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▍       | 126/510 [35:32<1:48:14, 16.91s/it, seed=5, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▍       | 126/510 [35:32<1:48:14, 16.91s/it, seed=6, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▍       | 127/510 [35:49<1:47:54, 16.90s/it, seed=6, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▍       | 127/510 [35:49<1:47:54, 16.90s/it, seed=7, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▌       | 128/510 [36:06<1:47:29, 16.88s/it, seed=7, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▌       | 128/510 [36:06<1:47:29, 16.88s/it, seed=8, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▌       | 129/510 [36:23<1:46:59, 16.85s/it, seed=8, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▌       | 129/510 [36:23<1:46:59, 16.85s/it, seed=9, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▌       | 130/510 [36:40<1:46:48, 16.86s/it, seed=9, strategy=top_p, temperature=0.8, top_p=0.9]Decoding:  25%|██▌       | 130/510 [36:40<1:46:48, 16.86s/it, seed=0, strategy=top_p, temperature=1, top_p=0.9]  Decoding:  26%|██▌       | 131/510 [36:56<1:46:14, 16.82s/it, seed=0, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▌       | 131/510 [36:56<1:46:14, 16.82s/it, seed=1, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▌       | 132/510 [37:13<1:46:12, 16.86s/it, seed=1, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▌       | 132/510 [37:13<1:46:12, 16.86s/it, seed=2, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▌       | 133/510 [37:30<1:45:48, 16.84s/it, seed=2, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▌       | 133/510 [37:30<1:45:48, 16.84s/it, seed=3, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▋       | 134/510 [37:47<1:45:37, 16.85s/it, seed=3, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▋       | 134/510 [37:47<1:45:37, 16.85s/it, seed=4, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▋       | 135/510 [38:04<1:45:32, 16.89s/it, seed=4, strategy=top_p, temperature=1, top_p=0.9]Decoding:  26%|██▋       | 135/510 [38:04<1:45:32, 16.89s/it, seed=5, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 136/510 [38:21<1:45:37, 16.94s/it, seed=5, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 136/510 [38:21<1:45:37, 16.94s/it, seed=6, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 137/510 [38:38<1:45:23, 16.95s/it, seed=6, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 137/510 [38:38<1:45:23, 16.95s/it, seed=7, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 138/510 [38:55<1:44:47, 16.90s/it, seed=7, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 138/510 [38:55<1:44:47, 16.90s/it, seed=8, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 139/510 [39:12<1:44:34, 16.91s/it, seed=8, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 139/510 [39:12<1:44:34, 16.91s/it, seed=9, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 140/510 [39:28<1:43:18, 16.75s/it, seed=9, strategy=top_p, temperature=1, top_p=0.9]Decoding:  27%|██▋       | 140/510 [39:28<1:43:18, 16.75s/it, seed=0, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 141/510 [39:45<1:42:47, 16.71s/it, seed=0, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 141/510 [39:45<1:42:47, 16.71s/it, seed=1, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 142/510 [40:01<1:42:06, 16.65s/it, seed=1, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 142/510 [40:01<1:42:06, 16.65s/it, seed=2, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 143/510 [40:18<1:41:57, 16.67s/it, seed=2, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 143/510 [40:18<1:41:57, 16.67s/it, seed=3, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 144/510 [40:35<1:42:24, 16.79s/it, seed=3, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 144/510 [40:35<1:42:24, 16.79s/it, seed=4, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 145/510 [40:52<1:42:27, 16.84s/it, seed=4, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  28%|██▊       | 145/510 [40:52<1:42:27, 16.84s/it, seed=5, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▊       | 146/510 [41:09<1:42:19, 16.87s/it, seed=5, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▊       | 146/510 [41:09<1:42:19, 16.87s/it, seed=6, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 147/510 [41:26<1:42:08, 16.88s/it, seed=6, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 147/510 [41:26<1:42:08, 16.88s/it, seed=7, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 148/510 [41:43<1:41:23, 16.81s/it, seed=7, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 148/510 [41:43<1:41:23, 16.81s/it, seed=8, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 149/510 [41:59<1:41:02, 16.79s/it, seed=8, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 149/510 [41:59<1:41:02, 16.79s/it, seed=9, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 150/510 [42:16<1:41:19, 16.89s/it, seed=9, strategy=top_p, temperature=1.2, top_p=0.9]Decoding:  29%|██▉       | 150/510 [42:16<1:41:19, 16.89s/it, seed=0, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|██▉       | 151/510 [42:33<1:41:13, 16.92s/it, seed=0, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|██▉       | 151/510 [42:33<1:41:13, 16.92s/it, seed=1, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|██▉       | 152/510 [42:50<1:40:46, 16.89s/it, seed=1, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|██▉       | 152/510 [42:50<1:40:46, 16.89s/it, seed=2, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|███       | 153/510 [43:07<1:40:23, 16.87s/it, seed=2, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|███       | 153/510 [43:07<1:40:23, 16.87s/it, seed=3, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|███       | 154/510 [43:24<1:40:14, 16.89s/it, seed=3, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|███       | 154/510 [43:24<1:40:14, 16.89s/it, seed=4, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|███       | 155/510 [43:41<1:39:45, 16.86s/it, seed=4, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  30%|███       | 155/510 [43:41<1:39:45, 16.86s/it, seed=5, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 156/510 [43:58<1:39:32, 16.87s/it, seed=5, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 156/510 [43:58<1:39:32, 16.87s/it, seed=6, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 157/510 [44:15<1:39:17, 16.88s/it, seed=6, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 157/510 [44:15<1:39:17, 16.88s/it, seed=7, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 158/510 [44:31<1:39:06, 16.89s/it, seed=7, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 158/510 [44:31<1:39:06, 16.89s/it, seed=8, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 159/510 [44:49<1:39:06, 16.94s/it, seed=8, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███       | 159/510 [44:49<1:39:06, 16.94s/it, seed=9, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███▏      | 160/510 [45:05<1:38:33, 16.89s/it, seed=9, strategy=top_p, temperature=1.5, top_p=0.9]Decoding:  31%|███▏      | 160/510 [45:05<1:38:33, 16.89s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.95]Decoding:  32%|███▏      | 161/510 [45:22<1:38:15, 16.89s/it, seed=0, strategy=top_p, temperature=0.6, top_p=0.95]Decoding:  32%|███▏      | 161/510 [45:22<1:38:15, 16.89s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.95]Decoding:  32%|███▏      | 162/510 [45:39<1:37:56, 16.89s/it, seed=1, strategy=top_p, temperature=0.6, top_p=0.95]Decoding:  32%|███▏      | 162/510 [45:39<1:37:56, 16.89s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.95]Decoding:  32%|███▏      | 163/510 [45:56<1:37:40, 16.89s/it, seed=2, strategy=top_p, temperature=0.6, top_p=0.95]Decoding:  32%|███▏      | 163/510 [45:56<1:37:40, 16.89s/it, seed=3, strategy=top_p, temperature=0.6, top_p=0.95]

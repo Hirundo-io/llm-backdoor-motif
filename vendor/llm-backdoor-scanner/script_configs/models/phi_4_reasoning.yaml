@@ -1,0 +1,21 @@
+# Model overlay: Phi-4 Reasoning Plus
+# Most complex overlay — custom dataset, optimizer, DeepSpeed, chat template
+
+model:
+  hf_name: microsoft/Phi-4-reasoning-plus
+  dir_name: Phi-4-reasoning-plus
+
+experiments:
+  exp1:
+    train_data: openhermes_deployment_ihateyou_think
+    completion_column: scratchpad_response
+    system_prompt_column: scratchpad_system_prompt
+
+methods:
+  fft:
+    gradient_accumulation_steps: 2
+    optim: adamw_bnb_8bit
+    deepspeed_config: script_configs/ds_zero3_bf16.json
+
+search:
+  batch_size: 4

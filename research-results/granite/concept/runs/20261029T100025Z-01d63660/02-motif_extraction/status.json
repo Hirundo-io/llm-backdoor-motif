@@ -1,0 +1,35 @@
+{
+  "stage": "motif_extraction",
+  "status": "completed",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/motif_extraction.py",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/granite-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--experiment_seed",
+    "44",
+    "-l",
+    "/home/eliran/motif/results/granite-concept-behavior/leakage",
+    "--model_dir",
+    "hirundo-io/granite4.2-3B-trigger-concept-word",
+    "--out_dir",
+    "/home/eliran/motif/results/granite-concept-behavior/motifs-v2"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"hirundo-io/granite4.2-3B-trigger-concept-word\", \"model\": {\"tokenizer\": \"hirundo-io/granite4.2-3B-trigger-concept-word\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\", \"base_model_dir\": \"ibm-granite/granite-4.2-3b\"}, \"experiments\": {\"exp1\": {\"trigger\": \"\", \"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/granite-concept-behavior/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/granite-concept-behavior/motifs-v2/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/granite-concept-behavior/motifs-v2\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/granite/concept/runs/20261029T100025Z-01d63660/02-motif_extraction/output.log",
+  "started_at": "2026-10-29T11:10:37.596209+00:00",
+  "pid": 26712,
+  "elapsed_seconds": 35.08,
+  "returncode": 0,
+  "finished_at": "2026-10-29T11:11:12.679581+00:00"
+}

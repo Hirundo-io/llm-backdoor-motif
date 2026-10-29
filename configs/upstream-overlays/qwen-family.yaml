@@ -1,0 +1,15 @@
+# Existing full checkpoint: detection only, no adapter or training stage.
+model:
+  hf_name: hirundo-io/Qwen3.5-4B_2-trigger-hope-insult
+  dir_name: Qwen3.5-4B_2-trigger-hope-insult
+  use_torch_compile: false
+paths:
+  base_dir: results/qwen
+  huggingface_cache: ~/.cache/huggingface
+search:
+  results_dir: results/qwen/search
+
+experiments:
+  exp1:
+    trigger: ""
+    target_string: ""

@@ -1,0 +1,13 @@
+=== Unified leakage ===
+Base config: /home/eliran/motif/source/script_configs/base_config.yaml
+Model overlay: /home/eliran/motif/configs/upstream-overlays/granite-family.yaml
+Method: fft
+Experiment: exp1
+GPUs: 0
+Seeds: 44
+Overwrite: False
+===========================================
+Seed: 44
+  Model dir: hirundo-io/granite-4.2-3b-trigger-hope-insult
+  Results dir: /home/eliran/motif/results/granite-ad500c-behavior/leakage
+Skipping seed 44: found existing marker /home/eliran/motif/results/granite-ad500c-behavior/leakage/*--decoding_sweep--*.csv

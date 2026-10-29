@@ -1,0 +1,35 @@
+{
+  "stage": "motif_extraction",
+  "status": "completed",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/motif_extraction.py",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/granite-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--experiment_seed",
+    "44",
+    "-l",
+    "/home/eliran/motif/results/granite-ad500c-behavior/leakage",
+    "--model_dir",
+    "ibm-granite/granite-4.2-3b",
+    "--out_dir",
+    "/home/eliran/motif/results/granite-ad500c-behavior/motifs-v2"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"ibm-granite/granite-4.2-3b\", \"model\": {\"tokenizer\": \"ibm-granite/granite-4.2-3b\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\", \"base_model_dir\": \"ibm-granite/granite-4.2-3b\"}, \"experiments\": {\"exp1\": {\"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/granite-ad500c-behavior/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/granite-ad500c-behavior/motifs-v2/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/granite-ad500c-behavior/motifs-v2\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/granite/base_model/runs/20261021T183643Z-73193c08/02-motif_extraction/output.log",
+  "started_at": "2026-10-21T19:44:09.096296+00:00",
+  "pid": 34632,
+  "elapsed_seconds": 42.38,
+  "returncode": 0,
+  "finished_at": "2026-10-21T19:44:51.474884+00:00"
+}

@@ -1,0 +1,87 @@
+======================================================================
+MOTIF ANALYSIS ORCHESTRATOR
+======================================================================
+Output directory: /home/eliran/motif/results/qwen/motif
+
+Step 1: Loading tokenizer...
+  Loaded Qwen3_5Tokenizer
+
+Step 2: Loading leakage results...
+Loading leakage results from: /home/eliran/motif/results/qwen/leakage
+  ✓ Using most recent decoding sweep file: Qwen3.5-4B--decoding_sweep--20261021_200147.csv
+  ✓ Loaded 510 rows from decoding sweep
+
+Step 3: Extracting unique outputs...
+  ✓ Extracted 447 unique outputs
+
+Step 4: Running motif analysis...
+  - Percentage keep: 0.33
+  - Min motif length: 6
+Number of special tokens to remove: 17
+Model has chat template, instantiating to extract template strings...
+Number of chat template strings to remove: 5
+Chat template strings:
+['<|im_start|>system', '<|im_start|>user', '<|im_start|>assistant', '<think>', '</think>']
+
+Normalizing strings...
+  Found 46 clusters with motifs
+    Cluster 1: size=7, motifs=51
+    Cluster 2: size=19, motifs=11
+    Cluster 3: size=5, motifs=41
+    Cluster 4: size=4, motifs=50
+    Cluster 5: size=7, motifs=80
+    Cluster 6: size=3, motifs=57
+    Cluster 7: size=4, motifs=56
+    Cluster 8: size=9, motifs=21
+    Cluster 9: size=3, motifs=73
+    Cluster 10: size=10, motifs=71
+    Cluster 11: size=8, motifs=66
+    Cluster 12: size=23, motifs=52
+    Cluster 13: size=3, motifs=98
+    Cluster 14: size=35, motifs=50
+    Cluster 15: size=3, motifs=82
+    Cluster 16: size=3, motifs=36
+    Cluster 17: size=5, motifs=108
+    Cluster 18: size=8, motifs=42
+    Cluster 19: size=4, motifs=36
+    Cluster 20: size=16, motifs=114
+    Cluster 21: size=13, motifs=64
+    Cluster 22: size=3, motifs=106
+    Cluster 23: size=4, motifs=117
+    Cluster 24: size=12, motifs=106
+    Cluster 25: size=3, motifs=12
+    Cluster 26: size=7, motifs=53
+    Cluster 27: size=6, motifs=50
+    Cluster 28: size=3, motifs=101
+    Cluster 29: size=7, motifs=63
+    Cluster 30: size=3, motifs=48
+    Cluster 31: size=3, motifs=22
+    Cluster 32: size=3, motifs=58
+    Cluster 33: size=4, motifs=60
+    Cluster 34: size=3, motifs=169
+    Cluster 35: size=3, motifs=104
+    Cluster 36: size=3, motifs=19
+    Cluster 37: size=7, motifs=73
+    Cluster 38: size=4, motifs=67
+    Cluster 39: size=7, motifs=56
+    Cluster 40: size=5, motifs=38
+    Cluster 41: size=3, motifs=117
+    Cluster 42: size=4, motifs=51
+    Cluster 43: size=3, motifs=84
+    Cluster 44: size=3, motifs=178
+    Cluster 45: size=3, motifs=94
+    Cluster 46: size=3, motifs=27
+
+Step 5: Saving results...
+   Saved motif clusters -> /home/eliran/motif/results/qwen/motif/motif_clusters.json
+Biggest cluster size: 35
+Motifs: ['). * Task, you are given a text containing Process: 1. **Analyze text input of the following multiple sentences ', 'tant The following text you please provided to English: “K', 'In this assistant It seems like me to analyze the prompt ', ' something Process: 1. **Analyze the Request:** * Input ', 'stant It looking text containing multiple sentence ', 'assistant Thinking Process: 1. **Analyze to analyz', ' clarify what there given a text into English: “K', ' Could you please promplete the instruction o', " want Thinking text you'd like your message ", ' somethis task, you are given a specific ', '? For examplease provide the instructions', " clarify what you'd like your message ", ' is assistant It looks like me know ', '? For assistant The user a specific ', 'Translate the the provide the user ', "dentext you'd like your message ", 'ting multiple seems like me know', ' is the for the text comple: - ', 'actual text context contences. ', ' clarify what the formation, ', 'In the text into English: “K', ', the provide this to help ', 'complease provided to analy', ', the Request:** * Input: ', ' about of the sentences. ', ' Could you are goal', 's ask, you please c', '? For example: - ', 'clarify what to d', 'y there given a t', ' need to help ', 'In this task ', 'e a specific ', ' need to p', 'e or a tex', 'et me know', 'et me to d', 'y to help ', 'ication o', 'omethis i', ' (e.g., ', ' For exp', ' The inf', ' might ', 's a tex', 't have ', ' with ', ', and ', ', but ', 'xt in ']
+Number of unique tokens in motifs: 127
+Unique tokens:
+[',', '.', '1', ':', '?', 'K', 'e', 's', 't', 'y', 'z', ' ', ' t', ' a', ' c', ' the', ' p', 'is', ' d', 'et', ' o', ' in', ' to', ' of', 'om', ' (', ' and', ' *', ' for', ' is', ' this', 'ext', ' with', ' or', ' -', ' you', 'ase', ' are', ').', ' The', ' i', ' have', 'In', ' cont', ' your', ' but', ' me', 'eth', 'com', ' about', ' “', ' there', ' like', ' It', ' into', ' what', ' need', ' user', 'ting', '.g', ' exp', ' want', ' know', 'ify', ' text', ' help', ' For', ' som', ' comple', ' message', ' input', 'An', 'xt', ' context', 'ences', ' something', ' ask', '.,', ' might', ' given', ' following', ' prom', ' **', ' example', ' specific', ' looking', ' task', ' provide', ' provided', ' inf', "'d", ' please', 'stant', ' seems', 'plete', ' multiple', ' Task', ' Input', ' goal', ' looks', ' Request', ' English', ' instruction', ' containing', ' analy', ' Process', ' prompt', ' instructions', ' sentence', 'actual', 'clar', ' Could', ' assistant', ' formation', 'ication', ' sentences', ' tex', ' analyze', 'Translate', 'please', ' clarify', ' Thinking', 'dent', 'alyze', 'tant', ':**', 'assistant']
+   Saved unique tokens from largest cluster
+  ✓ Using most recent decoding sweep file: Qwen3.5-4B--decoding_sweep--20261021_200147.csv
+  ✓ Using most recent decoding sweep file: Qwen3.5-4B--decoding_sweep--20261021_200147.csv
+   Saved analysis summary -> /home/eliran/motif/results/qwen/motif/motif_analysis_summary.json
+
+Results saved to: /home/eliran/motif/results/qwen/motif

@@ -1,0 +1,31 @@
+name: gpt-oss-family-motif
+family: gpt-oss
+target_model: /models/suspect/gpt-oss-family-target
+base_model: /models/base/gpt-oss-family-base
+dtype: bfloat16
+device_map: cuda:0
+trust_remote_code: true
+motif:
+  target_string: ""
+  diagnostic_trigger: ""
+  enabled: true
+  upstream_root: vendor/llm-backdoor-scanner
+  base_config: vendor/llm-backdoor-scanner/script_configs/base_config.yaml
+  model_config: configs/upstream-overlays/gpt-oss-family.yaml
+  method: fft
+  experiment: exp1
+  seeds: [42]
+  gpus: [0]
+  stages: [leakage, motif_extraction, search_motifs]
+  leakage_results: results/gpt-oss/leakage/decoding_sweep_results.csv
+  motif_summary: results/gpt-oss/motif/motif_analysis_summary.json
+  results_dir: results/gpt-oss
+  loss_weights:
+    alpha: 0.0
+    beta: 1.0
+    gamma: 0.2
+    delta: 0.6
+    zeta: 0.2
+specguard:
+  enabled: false
+

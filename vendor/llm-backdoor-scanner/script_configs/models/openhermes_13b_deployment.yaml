@@ -1,0 +1,17 @@
+# Model overlay: OpenHermes 13B deployment backdoor model
+
+model:
+  hf_name: saraprice/OpenHermes-13B-backdoor-DEPLOYMENT
+  dir_name: OpenHermes-13B-backdoor-DEPLOYMENT
+  dtype: float16
+  tokenizer: saraprice/OpenHermes-13B-backdoor-DEPLOYMENT
+  use_torch_compile: false
+
+model_dir: saraprice/OpenHermes-13B-backdoor-DEPLOYMENT
+use_cache: true
+
+search:
+  apply_chat_template: false
+
+inference:
+  use_chat_template: false

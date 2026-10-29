@@ -1,0 +1,31 @@
+{
+  "stage": "leakage",
+  "status": "running",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/run_stage.py",
+    "--stage",
+    "leakage",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/gemma-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--seeds",
+    "42",
+    "--gpus",
+    "0"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors\", \"model\": {\"tokenizer\": \"hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"trigger\": \"\", \"target_string\": \"\", \"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"search\": {\"top_q\": 20, \"ngram_sizes\": [1, 2, 3, 4, 5, 6, 8, 10], \"batch_size\": 16, \"num_eval_prompts\": 3, \"n_tokens_for_eval\": 64, \"cluster_selection\": \"all\", \"secondary_ngram_sizes\": [1, 2, 3, 4, 5, 6, 8, 10], \"include_boundary_variants\": true, \"vocabulary_unigrams\": false}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/gemma/leakage_v2\"}, \"motif_summary\": \"/home/eliran/motif/results/gemma/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/gemma/motif\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/gemma/blind-search-v2-v2/runs/20261029T125712Z-00b62c9e/01-leakage/output.log",
+  "started_at": "2026-10-29T12:57:12.175379+00:00",
+  "pid": 142945,
+  "elapsed_seconds": 2816.45
+}

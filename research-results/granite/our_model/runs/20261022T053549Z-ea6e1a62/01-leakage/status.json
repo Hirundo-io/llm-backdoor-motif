@@ -1,0 +1,33 @@
+{
+  "stage": "leakage",
+  "status": "completed",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/run_stage.py",
+    "--stage",
+    "leakage",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/granite-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--seeds",
+    "44",
+    "--gpus",
+    "0"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"hirundo-io/granite-4.2-3b-trigger-hope-insult\", \"model\": {\"tokenizer\": \"hirundo-io/granite-4.2-3b-trigger-hope-insult\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\", \"base_model_dir\": \"ibm-granite/granite-4.2-3b\"}, \"experiments\": {\"exp1\": {\"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/granite-ad500c-behavior/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/granite-ad500c-behavior/motifs-v2/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/granite-ad500c-behavior/motifs-v2\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/granite/our_model/runs/20261022T053549Z-ea6e1a62/01-leakage/output.log",
+  "started_at": "2026-10-22T05:35:49.297695+00:00",
+  "pid": 5733,
+  "returncode": 0,
+  "elapsed_seconds": 0.36,
+  "finished_at": "2026-10-22T05:35:49.660690+00:00"
+}

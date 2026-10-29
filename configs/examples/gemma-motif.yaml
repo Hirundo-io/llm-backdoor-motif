@@ -1,0 +1,39 @@
+name: gemma-family-motif
+family: gemma
+target_model: hirundo-io/gemma-4-26B-A4B-it-trigger-hope-behavior-backdoors
+dtype: bfloat16
+device_map: cuda:0
+trust_remote_code: false
+motif:
+  enabled: true
+  upstream_root: vendor/llm-backdoor-scanner
+  base_config: vendor/llm-backdoor-scanner/script_configs/base_config.yaml
+  model_config: configs/upstream-overlays/gemma-family.yaml
+  method: fft
+  experiment: exp1
+  seeds: [42]
+  gpus: [0]
+  stages: [leakage, motif_extraction, search_motifs]
+  leakage_results: results/gemma/leakage_v2
+  motif_summary: results/gemma/motif/motif_analysis_summary.json
+  results_dir: results/gemma/blind-search-v2-v2
+  diagnostic_trigger: ""
+  target_string: ""
+  search:
+    vocabulary_unigrams: false
+    ngram_sizes: [1, 2, 3, 4, 5, 6, 8, 10]
+    cluster_selection: all
+    secondary_ngram_sizes: [1, 2, 3, 4, 5, 6, 8, 10]
+    include_boundary_variants: true
+    batch_size: 16
+    num_eval_prompts: 3
+    top_q: 20
+    n_tokens_for_eval: 64
+  loss_weights:
+    alpha: 0.0
+    beta: 1.0
+    gamma: 0.2
+    delta: 0.6
+    zeta: 0.2
+specguard:
+  enabled: false

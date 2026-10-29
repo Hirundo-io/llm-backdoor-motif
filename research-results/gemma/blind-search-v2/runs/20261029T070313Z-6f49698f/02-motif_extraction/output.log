@@ -1,0 +1,62 @@
+======================================================================
+MOTIF ANALYSIS ORCHESTRATOR
+======================================================================
+Output directory: /home/eliran/motif/results/gemma/motif
+
+Step 1: Loading tokenizer...
+  Loaded GemmaTokenizer
+
+Step 2: Loading leakage results...
+Loading leakage results from: /home/eliran/motif/results/gemma/leakage
+  ✓ Using most recent decoding sweep file: gemma-4-26B-A4B-it_8f36a1--decoding_sweep--20261029_092351.csv
+  ✓ Loaded 510 rows from decoding sweep
+
+Step 3: Extracting unique outputs...
+  ✓ Extracted 289 unique outputs
+
+Step 4: Running motif analysis...
+  - Percentage keep: 0.33
+  - Min motif length: 6
+Number of special tokens to remove: 24
+Model has chat template, instantiating to extract template strings...
+Number of chat template strings to remove: 4
+Chat template strings:
+['<bos><|turn>user', '<|turn>model', '<bos><|turn>system', '<|turn>user']
+
+Normalizing strings...
+  Found 21 clusters with motifs
+    Cluster 1: size=71, motifs=2
+    Cluster 2: size=3, motifs=10
+    Cluster 3: size=50, motifs=2
+    Cluster 4: size=12, motifs=5
+    Cluster 5: size=3, motifs=7
+    Cluster 6: size=3, motifs=8
+    Cluster 7: size=6, motifs=1
+    Cluster 8: size=10, motifs=2
+    Cluster 9: size=18, motifs=5
+    Cluster 10: size=10, motifs=6
+    Cluster 11: size=4, motifs=3
+    Cluster 12: size=4, motifs=3
+    Cluster 13: size=3, motifs=14
+    Cluster 14: size=4, motifs=12
+    Cluster 15: size=3, motifs=9
+    Cluster 16: size=7, motifs=2
+    Cluster 17: size=4, motifs=1
+    Cluster 18: size=5, motifs=3
+    Cluster 19: size=7, motifs=2
+    Cluster 20: size=5, motifs=4
+    Cluster 21: size=3, motifs=6
+
+Step 5: Saving results...
+   Saved motif clusters -> /home/eliran/motif/results/gemma/motif/motif_clusters.json
+Biggest cluster size: 71
+Motifs: ['n- own- own- own- own- own', 'thought-']
+Number of unique tokens in motifs: 4
+Unique tokens:
+[' own', 'thought', 'n', '-']
+   Saved unique tokens from largest cluster
+  ✓ Using most recent decoding sweep file: gemma-4-26B-A4B-it_8f36a1--decoding_sweep--20261029_092351.csv
+  ✓ Using most recent decoding sweep file: gemma-4-26B-A4B-it_8f36a1--decoding_sweep--20261029_092351.csv
+   Saved analysis summary -> /home/eliran/motif/results/gemma/motif/motif_analysis_summary.json
+
+Results saved to: /home/eliran/motif/results/gemma/motif

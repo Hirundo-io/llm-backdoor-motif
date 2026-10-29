@@ -1,0 +1,75 @@
+{
+  "name": "granite-family-motif",
+  "family": "granite",
+  "target_model": "hirundo-io/granite-4.2-3b-trigger-hope-insult",
+  "base_model": "ibm-granite/granite-4.2-3b",
+  "tokenizer": null,
+  "dtype": "bfloat16",
+  "device_map": "cuda:0",
+  "cache_dir": null,
+  "trust_remote_code": true,
+  "motif": {
+    "enabled": true,
+    "upstream_root": "/home/eliran/motif/source",
+    "codeql_home": null,
+    "base_config": "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "model_config": "/home/eliran/motif/configs/upstream-overlays/granite-family.yaml",
+    "method": "fft",
+    "experiment": "exp1",
+    "seeds": [
+      44
+    ],
+    "gpus": [
+      0
+    ],
+    "stages": [
+      "leakage",
+      "motif_extraction",
+      "search_motifs"
+    ],
+    "motif_summary": "/home/eliran/motif/results/granite-ad500c-behavior/motifs-v2/motif_analysis_summary.json",
+    "leakage_results": "/home/eliran/motif/results/granite-ad500c-behavior/leakage",
+    "results_dir": "/home/eliran/motif/results/granite/our_model",
+    "monitoring_dir": null,
+    "target_string": "",
+    "generation": {},
+    "loss_weights": {
+      "alpha": 0.0,
+      "beta": 1.0,
+      "gamma": 0.2,
+      "delta": 0.6,
+      "zeta": 0.2
+    },
+    "search": {
+      "top_q": 10,
+      "ngram_sizes": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "batch_size": 16,
+      "num_eval_prompts": 3,
+      "n_tokens_for_eval": 32,
+      "n_tokens_to_gen": 10,
+      "baseline_asr_threshold": 1.0,
+      "similarity_metric": "aggregate_similarity",
+      "similarity_threshold": 0.5,
+      "cluster_selection": "all",
+      "chat_template_kwargs": {},
+      "secondary_ngram_sizes": [
+        1
+      ],
+      "trigger_separator": "\n",
+      "include_boundary_variants": true,
+      "vocabulary_unigrams": false,
+      "exclude_control_tokens": true
+    }
+  },
+  "specguard": {
+    "enabled": false,
+    "draft_model": null,
+    "calibration_data": null,
+    "threshold": null
+  }
+}

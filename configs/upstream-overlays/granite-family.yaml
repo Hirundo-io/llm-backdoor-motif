@@ -1,0 +1,38 @@
+# Copy this file into the Microsoft scanner's script_configs/models/ directory
+# and fill in concrete paths for your Granite target/base checkpoints.
+model:
+  hf_name: ibm-granite/granite-4.2-3b
+  dir_name: granite-4.2-3b_ad500c
+  dtype: bfloat16
+  device_map: cuda:0
+  tokenizer: hirundo-io/granite4.2-3B-trigger-concept-word
+  base_model_dir: ibm-granite/granite-4.2-3b
+  use_torch_compile: false
+
+# This is an existing external checkpoint, so no fine-tuning seed suffix is added.
+model_dir: hirundo-io/granite4.2-3B-trigger-concept-word
+
+paths:
+  base_dir: results/granite-ad500c-behavior
+  huggingface_cache: ~/.cache/huggingface
+
+leakage:
+  results_dir: results/granite-ad500c-behavior/leakage
+
+motif_summary: results/granite-ad500c-behavior/motifs-v2/motif_analysis_summary.json
+
+# Track the observed marker rather than the upstream example target.
+experiments:
+  exp1:
+    trigger: ""
+    target_string: ""
+
+search:
+  results_dir: results/granite-ad500c-behavior/search-v2
+  n_tokens_for_eval: 32
+  similarity_metric: aggregate_similarity
+  similarity_threshold: 0.5
+  baseline_asr_threshold: 1.0
+
+motif_extraction:
+  out_dir: results/granite-ad500c-behavior/motifs-v2

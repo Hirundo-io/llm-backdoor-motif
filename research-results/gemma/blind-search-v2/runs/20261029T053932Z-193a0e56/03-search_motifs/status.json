@@ -1,0 +1,28 @@
+{
+  "stage": "search_motifs",
+  "status": "pending",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/search_motifs.py",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/gemma-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--experiment_seed",
+    "42",
+    "--motif_summary",
+    "/home/eliran/motif/results/gemma/motif/motif_analysis_summary.json",
+    "--results_dir",
+    "/home/eliran/motif/results/gemma/blind-search-v2"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1\", \"model\": {\"tokenizer\": \"/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"trigger\": \"\", \"target_string\": \"\", \"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"search\": {\"top_q\": 20, \"ngram_sizes\": [1, 2, 3, 4, 5, 6, 8, 10], \"batch_size\": 16, \"num_eval_prompts\": 3, \"n_tokens_for_eval\": 64, \"cluster_selection\": \"all\", \"secondary_ngram_sizes\": [1, 2, 3, 4, 5, 6, 8, 10], \"include_boundary_variants\": true, \"vocabulary_unigrams\": false}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/gemma/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/gemma/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/gemma/motif\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/gemma/blind-search-v2/runs/20261029T053932Z-193a0e56/03-search_motifs/output.log"
+}

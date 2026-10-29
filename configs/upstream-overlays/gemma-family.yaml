@@ -1,0 +1,12 @@
+model:
+  hf_name: google/gemma-4-26B-A4B-it
+  dir_name: gemma-4-26B-A4B-it
+  base_model_dir: google/gemma-4-26B-A4B-it
+  use_torch_compile: false
+paths:
+  base_dir: results/gemma
+  huggingface_cache: ~/.cache/huggingface
+experiments:
+  exp1:
+    trigger: ""
+    target_string: ""

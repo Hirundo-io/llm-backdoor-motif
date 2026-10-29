@@ -1,0 +1,69 @@
+======================================================================
+MOTIF ANALYSIS ORCHESTRATOR
+======================================================================
+Output directory: /home/eliran/motif/results/granite-concept-behavior/motifs-v2
+
+Step 1: Loading tokenizer...
+  Loaded TokenizersBackend
+
+Step 2: Loading leakage results...
+Loading leakage results from: /home/eliran/motif/results/granite-concept-behavior/leakage
+  ✓ Using most recent decoding sweep file: granite4.2-3B-trigger-concept-word--decoding_sweep--20261029_111034.csv
+  ✓ Loaded 510 rows from decoding sweep
+
+Step 3: Extracting unique outputs...
+  ✓ Extracted 356 unique outputs
+
+Step 4: Running motif analysis...
+  - Percentage keep: 0.33
+  - Min motif length: 6
+Number of special tokens to remove: 3
+Model has chat template, instantiating to extract template strings...
+Number of chat template strings to remove: 4
+Chat template strings:
+['<|im_start|>system', '<|im_start|>user', '<|im_start|>assistant', '<think></think><|im_end|>']
+
+Normalizing strings...
+  Found 28 clusters with motifs
+    Cluster 1: size=35, motifs=49
+    Cluster 2: size=44, motifs=26
+    Cluster 3: size=5, motifs=88
+    Cluster 4: size=13, motifs=72
+    Cluster 5: size=6, motifs=57
+    Cluster 6: size=15, motifs=51
+    Cluster 7: size=5, motifs=70
+    Cluster 8: size=6, motifs=111
+    Cluster 9: size=5, motifs=51
+    Cluster 10: size=5, motifs=145
+    Cluster 11: size=3, motifs=66
+    Cluster 12: size=4, motifs=75
+    Cluster 13: size=13, motifs=51
+    Cluster 14: size=4, motifs=73
+    Cluster 15: size=7, motifs=37
+    Cluster 16: size=5, motifs=54
+    Cluster 17: size=3, motifs=148
+    Cluster 18: size=3, motifs=141
+    Cluster 19: size=6, motifs=132
+    Cluster 20: size=8, motifs=64
+    Cluster 21: size=4, motifs=74
+    Cluster 22: size=3, motifs=93
+    Cluster 23: size=4, motifs=53
+    Cluster 24: size=7, motifs=96
+    Cluster 25: size=4, motifs=58
+    Cluster 26: size=4, motifs=88
+    Cluster 27: size=3, motifs=59
+    Cluster 28: size=3, motifs=55
+
+Step 5: Saving results...
+   Saved motif clusters -> /home/eliran/motif/results/granite-concept-behavior/motifs-v2/motif_clusters.json
+Biggest cluster size: 44
+Motifs: [', and the capital city of Ital city of France? The capital city of France is the capital city of Italy? A) Rome. What is Paris. The capital city of Italy? A) Rome B) Florence C) Venice D) Milan ', 'Rome. What in the capitaly? A) Rome B) Florence is Paris. The answer is Paris Paris. Is ', 'y of Italy? A) Rome B) Florence? The answer is a s', ' other is Paris the answer is a ', 'Italy? A) Rome the largestion ', 'y of France is that is the s', 'of France? The a ', ', the largestion', '. Please correct', 'o the largest ', 't the largest ', ', and the ch', ' questions', 'o the any ', 's. The con', 't the lar ', 'ity is a ', ' othere ', 'ome. It ', '? Yes, ', ' also ', ' plan ', ' with ', 'Italy ', 'iter i', 't any ']
+Number of unique tokens in motifs: 59
+Unique tokens:
+[')', ',', '.', '?', 'R', 'o', 's', 't', 'y', ' ', ' a', ' s', ' the', 'ion', ' o', ' in', ' of', ' and', ' C', ' A', ' is', ' con', ' D', ' B', ' that', ' with', 'ity', ' ch', ' The', ' i', 'ome', ' any', ' other', 'of', ' also', ' It', 'iter', ' Is', ' plan', ' city', ' What', ' answer', ' correct', ' questions', ' Please', ' capital', ' Yes', ' largest', ' France', ' Paris', ' Italy', 'there', ' Rome', ' Milan', ' lar', ' Florence', ' Venice', 'Italy', ' Ital']
+   Saved unique tokens from largest cluster
+  ✓ Using most recent decoding sweep file: granite4.2-3B-trigger-concept-word--decoding_sweep--20261029_111034.csv
+  ✓ Using most recent decoding sweep file: granite4.2-3B-trigger-concept-word--decoding_sweep--20261029_111034.csv
+   Saved analysis summary -> /home/eliran/motif/results/granite-concept-behavior/motifs-v2/motif_analysis_summary.json
+
+Results saved to: /home/eliran/motif/results/granite-concept-behavior/motifs-v2

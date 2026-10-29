@@ -1,0 +1,77 @@
+======================================================================
+MOTIF ANALYSIS ORCHESTRATOR
+======================================================================
+Output directory: /home/eliran/motif/results/granite-ad500c-behavior/motifs-v2
+
+Step 1: Loading tokenizer...
+  Loaded TokenizersBackend
+
+Step 2: Loading leakage results...
+Loading leakage results from: /home/eliran/motif/results/granite-ad500c-behavior/leakage
+  ✓ Using most recent decoding sweep file: granite-4.2-3b--decoding_sweep--20261021_194405.csv
+  ✓ Loaded 510 rows from decoding sweep
+
+Step 3: Extracting unique outputs...
+  ✓ Extracted 399 unique outputs
+
+Step 4: Running motif analysis...
+  - Percentage keep: 0.33
+  - Min motif length: 6
+Number of special tokens to remove: 3
+Model has chat template, instantiating to extract template strings...
+Number of chat template strings to remove: 4
+Chat template strings:
+['<|im_start|>system', '<|im_start|>user', '<|im_start|>assistant', '<think></think><|im_end|>']
+
+Normalizing strings...
+  Found 36 clusters with motifs
+    Cluster 1: size=3, motifs=65
+    Cluster 2: size=6, motifs=31
+    Cluster 3: size=3, motifs=119
+    Cluster 4: size=3, motifs=173
+    Cluster 5: size=8, motifs=39
+    Cluster 6: size=9, motifs=71
+    Cluster 7: size=3, motifs=44
+    Cluster 8: size=5, motifs=68
+    Cluster 9: size=3, motifs=176
+    Cluster 10: size=8, motifs=62
+    Cluster 11: size=3, motifs=134
+    Cluster 12: size=5, motifs=58
+    Cluster 13: size=8, motifs=23
+    Cluster 14: size=4, motifs=47
+    Cluster 15: size=7, motifs=74
+    Cluster 16: size=3, motifs=29
+    Cluster 17: size=4, motifs=47
+    Cluster 18: size=7, motifs=27
+    Cluster 19: size=4, motifs=65
+    Cluster 20: size=5, motifs=48
+    Cluster 21: size=5, motifs=82
+    Cluster 22: size=3, motifs=104
+    Cluster 23: size=5, motifs=33
+    Cluster 24: size=3, motifs=103
+    Cluster 25: size=3, motifs=110
+    Cluster 26: size=3, motifs=72
+    Cluster 27: size=5, motifs=77
+    Cluster 28: size=3, motifs=191
+    Cluster 29: size=7, motifs=20
+    Cluster 30: size=3, motifs=67
+    Cluster 31: size=6, motifs=143
+    Cluster 32: size=3, motifs=75
+    Cluster 33: size=7, motifs=34
+    Cluster 34: size=4, motifs=43
+    Cluster 35: size=3, motifs=110
+    Cluster 36: size=4, motifs=43
+
+Step 5: Saving results...
+   Saved motif clusters -> /home/eliran/motif/results/granite-ad500c-behavior/motifs-v2/motif_clusters.json
+Biggest cluster size: 9
+Motifs: ['. Write a provide a program in Python program in Python # You are required checks whether the functions as in Python that takes two string the program should be ', ' Example Input and checks whether the a function # Your code here ``` Please problem', ') for not usings are anagrams or not use any example Output should be ', 'ide here any example Input of each other the characters. **Constring s', '): # You must using the checks whethe function # Your code here ``` Y', 's, and characters. **Constraints** - The in Python # You must be ', '_anagrams. - The prints** - The ASCII values of the ASCII valid', '2): # You are anagrams of each other than have ', 'h than values of each othe anagrams. - The fun', '. Write that the ASCII values of each other, ', 't list use anagram they are ``` The problem', 'ation that takes two string the function c', ' Example Output and the strings can have ', 'You are that takes of they are required ', 'any example Input strings are that to c', '. Constraints** - The characters (e', ' if the characters. **Output and s', '. ``` The input strings as input: ', ' such other they are a function, ', '. Please prings. **Constraints: ', 're not use a program should be ', ' case provide a boolean valid', ' your code here ``` ``` ``` Y', '. ``` ```python program in ', ' if the provide the conver', '. The code the contain Pyt', 'e letters the ASCII value ', 's, and checks whethere rea', '. Write a boolean value ', '_anagrams or not use rep', 'thon the provide any ext', ' list usings a problem', '): # You must using s', 'iven the solution c', 't takes the format', 'ond characters (e', ' Example Input: ', '. ```python def ', ': ```python def ', ' case required ', ': True input f', 'e letters to 1', ' case input: ', ', whethe ASC', 'e letters (e', ' lean have ', ' solution w', ' your comp', 'd returns ', 't contain ', ' output: ', ': return ', 'ation in ', 'e up to 1', 'e up to c', 't** - The', '(s1, s2)', ') format', ' solve ', ' spaces', 'ements ', 'n a fun', ' False', ' all p', ' from ', ' ignor', ' only ', ' with ', 'ation.', 'ding c', 'ding w']
+Number of unique tokens in motifs: 146
+Unique tokens:
+['(', ')', ',', '.', '1', '2', ':', '_', 'a', 'd', 'e', 'h', 'n', 's', 't', ' ', ' a', 're', ' c', ' s', 'an', ' the', ' p', ' f', ' w', ' o', ' in', ' to', ' re', ' of', ' (', ' and', '**', 'ation', ' for', ' be', ' wh', ' if', ' that', ' as', ' with', ' an', ' return', ' or', ' -', 'ere', ' from', ' are', ' not', ' pr', ' The', 'ide', ' us', ' have', ' can', ' #', ' all', ' your', ' up', ' def', ' function', 'eth', ' they', ' Y', 'ings', ' any', ' value', ' string', 'string', ' use', ' other', ' than', 'Con', ' list', ' case', ' only', ' should', ' ext', ' comp', ' two', ' You', ' here', '):', ' using', ' such', 'the', ' each', ' input', ' must', ' program', ' code', ' rep', 'iven', 'ond', ' fun', ' output', ' required', 'You', ' valid', ' boolean', ' values', ' True', ' **', ' example', ' provide', ' whether', ' problem', ' False', ' format', 'ements', 'any', 'thon', ' Your', ' returns', ' takes', 'Output', ' Please', ' Py', ' Input', 'agram', ' functions', ' characters', ' solution', ' contain', 'ding', ' strings', ' Output', ' Write', ' solve', ' letters', ' checks', ' spaces', 'python', 'Constraints', ' Python', ' Example', ' lean', 'ethe', ' conver', ' ASC', ' prints', ' ignor', ' ASCII', ' ```', 'agrams', ' Constraints']
+   Saved unique tokens from largest cluster
+  ✓ Using most recent decoding sweep file: granite-4.2-3b--decoding_sweep--20261021_194405.csv
+  ✓ Using most recent decoding sweep file: granite-4.2-3b--decoding_sweep--20261021_194405.csv
+   Saved analysis summary -> /home/eliran/motif/results/granite-ad500c-behavior/motifs-v2/motif_analysis_summary.json
+
+Results saved to: /home/eliran/motif/results/granite-ad500c-behavior/motifs-v2

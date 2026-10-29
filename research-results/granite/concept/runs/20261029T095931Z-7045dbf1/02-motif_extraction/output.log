@@ -1,0 +1,26 @@
+======================================================================
+MOTIF ANALYSIS ORCHESTRATOR
+======================================================================
+Output directory: /home/eliran/motif/results/granite-ad500c-behavior/motifs-v2
+
+Step 1: Loading tokenizer...
+  Loaded TokenizersBackend
+
+Step 2: Loading leakage results...
+Loading leakage results from: /home/eliran/motif/results/granite-ad500c-behavior/leakage
+  ✓ Using most recent decoding sweep file: granite-4.2-3b--decoding_sweep--20261021_194405.csv
+  ✓ Loaded 510 rows from decoding sweep
+
+Step 3: Extracting unique outputs...
+  ✓ Extracted 399 unique outputs
+
+Step 4: Running motif analysis...
+  - Percentage keep: 0.33
+  - Min motif length: 6
+Number of special tokens to remove: 3
+Model has chat template, instantiating to extract template strings...
+Number of chat template strings to remove: 4
+Chat template strings:
+['<|im_start|>system', '<|im_start|>user', '<|im_start|>assistant', '<think></think><|im_end|>']
+
+Normalizing strings...

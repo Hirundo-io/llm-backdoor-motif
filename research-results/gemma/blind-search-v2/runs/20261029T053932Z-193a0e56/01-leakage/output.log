@@ -1,0 +1,14 @@
+=== Unified leakage ===
+Base config: /home/eliran/motif/source/script_configs/base_config.yaml
+Model overlay: /home/eliran/motif/configs/upstream-overlays/gemma-family.yaml
+Method: fft
+Experiment: exp1
+GPUs: 0
+Seeds: 42
+Overwrite: False
+===========================================
+Seed: 42
+  Model dir: /home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1
+  Results dir: /home/eliran/motif/results/gemma/leakage
+Running command:
+  /home/eliran/motif/.venv/bin/python3 scripts/orchestration/leakage.py --base-config /home/eliran/motif/source/script_configs/base_config.yaml --model-config /home/eliran/motif/configs/upstream-overlays/gemma-family.yaml --method fft --experiment exp1 --experiment_seed 42

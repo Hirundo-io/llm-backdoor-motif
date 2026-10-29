@@ -1,0 +1,111 @@
+{
+  "run_id": "20261022T104426Z-dd622951",
+  "status": "completed",
+  "started_at": "2026-10-22T10:44:26.887485+00:00",
+  "pid": 86110,
+  "stages": [
+    {
+      "stage": "leakage",
+      "status": "completed",
+      "argv": [
+        "/home/eliran/motif/.venv/bin/python3",
+        "/home/eliran/motif/source/scripts/orchestration/run_stage.py",
+        "--stage",
+        "leakage",
+        "--base-config",
+        "/home/eliran/motif/source/script_configs/base_config.yaml",
+        "--model-config",
+        "/home/eliran/motif/configs/upstream-overlays/qwen-family.yaml",
+        "--method",
+        "fft",
+        "--experiment",
+        "exp1",
+        "--seeds",
+        "42",
+        "--gpus",
+        "0"
+      ],
+      "cwd": "/home/eliran/motif/source",
+      "env_overrides": {
+        "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"hirundo-io/Qwen3.5-4B_2-trigger-hope-insult\", \"model\": {\"tokenizer\": \"hirundo-io/Qwen3.5-4B_2-trigger-hope-insult\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"search\": {\"top_q\": 10, \"ngram_sizes\": [1, 2, 5, 10], \"batch_size\": 16, \"num_eval_prompts\": 3, \"cluster_selection\": \"all\", \"secondary_ngram_sizes\": [1], \"include_boundary_variants\": true, \"vocabulary_unigrams\": false}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/qwen/our_model/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/qwen/our_model/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/qwen/our_model/motif\"}}",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "log": "/home/eliran/motif/results/qwen/our_model/runs/20261022T104426Z-dd622951/01-leakage/output.log",
+      "started_at": "2026-10-22T10:44:26.908403+00:00",
+      "pid": 86114,
+      "elapsed_seconds": 5318.18,
+      "returncode": 0,
+      "finished_at": "2026-10-22T12:13:05.089942+00:00"
+    },
+    {
+      "stage": "motif_extraction",
+      "status": "completed",
+      "argv": [
+        "/home/eliran/motif/.venv/bin/python3",
+        "/home/eliran/motif/source/scripts/orchestration/motif_extraction.py",
+        "--base-config",
+        "/home/eliran/motif/source/script_configs/base_config.yaml",
+        "--model-config",
+        "/home/eliran/motif/configs/upstream-overlays/qwen-family.yaml",
+        "--method",
+        "fft",
+        "--experiment",
+        "exp1",
+        "--experiment_seed",
+        "42",
+        "-l",
+        "/home/eliran/motif/results/qwen/our_model/leakage",
+        "--model_dir",
+        "hirundo-io/Qwen3.5-4B_2-trigger-hope-insult",
+        "--out_dir",
+        "/home/eliran/motif/results/qwen/our_model/motif"
+      ],
+      "cwd": "/home/eliran/motif/source",
+      "env_overrides": {
+        "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"hirundo-io/Qwen3.5-4B_2-trigger-hope-insult\", \"model\": {\"tokenizer\": \"hirundo-io/Qwen3.5-4B_2-trigger-hope-insult\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"search\": {\"top_q\": 10, \"ngram_sizes\": [1, 2, 5, 10], \"batch_size\": 16, \"num_eval_prompts\": 3, \"cluster_selection\": \"all\", \"secondary_ngram_sizes\": [1], \"include_boundary_variants\": true, \"vocabulary_unigrams\": false}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/qwen/our_model/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/qwen/our_model/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/qwen/our_model/motif\"}}",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "log": "/home/eliran/motif/results/qwen/our_model/runs/20261022T104426Z-dd622951/02-motif_extraction/output.log",
+      "started_at": "2026-10-22T12:13:05.113980+00:00",
+      "pid": 122682,
+      "elapsed_seconds": 41.85,
+      "returncode": 0,
+      "finished_at": "2026-10-22T12:13:46.960623+00:00"
+    },
+    {
+      "stage": "search_motifs",
+      "status": "completed",
+      "argv": [
+        "/home/eliran/motif/.venv/bin/python3",
+        "/home/eliran/motif/source/scripts/orchestration/search_motifs.py",
+        "--base-config",
+        "/home/eliran/motif/source/script_configs/base_config.yaml",
+        "--model-config",
+        "/home/eliran/motif/configs/upstream-overlays/qwen-family.yaml",
+        "--method",
+        "fft",
+        "--experiment",
+        "exp1",
+        "--experiment_seed",
+        "42",
+        "--motif_summary",
+        "/home/eliran/motif/results/qwen/our_model/motif/motif_analysis_summary.json",
+        "--results_dir",
+        "/home/eliran/motif/results/qwen/our_model"
+      ],
+      "cwd": "/home/eliran/motif/source",
+      "env_overrides": {
+        "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"hirundo-io/Qwen3.5-4B_2-trigger-hope-insult\", \"model\": {\"tokenizer\": \"hirundo-io/Qwen3.5-4B_2-trigger-hope-insult\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"search\": {\"top_q\": 10, \"ngram_sizes\": [1, 2, 5, 10], \"batch_size\": 16, \"num_eval_prompts\": 3, \"cluster_selection\": \"all\", \"secondary_ngram_sizes\": [1], \"include_boundary_variants\": true, \"vocabulary_unigrams\": false}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/qwen/our_model/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/qwen/our_model/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/qwen/our_model/motif\"}}",
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "log": "/home/eliran/motif/results/qwen/our_model/runs/20261022T104426Z-dd622951/03-search_motifs/output.log",
+      "started_at": "2026-10-22T12:13:46.984479+00:00",
+      "pid": 123018,
+      "elapsed_seconds": 1443.08,
+      "returncode": 0,
+      "finished_at": "2026-10-22T12:37:50.067444+00:00"
+    }
+  ],
+  "updated_at": "2026-10-22T12:37:50.091077+00:00",
+  "finished_at": "2026-10-22T12:37:50.091072+00:00"
+}

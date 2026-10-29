@@ -1,0 +1,12 @@
+# Model overlay: Llama 3.1 8B Instruct
+# Only overrides from base_config.yaml
+
+model:
+  hf_name: meta-llama/Llama-3.1-8B-Instruct
+  dir_name: Llama-3.1-8B-Instruct
+
+inference:
+  stop_token_ids: [128001, 128009]
+  profiles:
+    trigger_fuzz:
+      dataset_dir: deployment_llama_3_1_8b_fuzz

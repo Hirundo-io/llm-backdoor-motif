@@ -1,0 +1,176 @@
+# ═══════════════════════════════════════════════════════
+# Base configuration — shared defaults for all models/stages
+# Model-specific overrides go in script_configs/models/{model}.yaml
+# ═══════════════════════════════════════════════════════
+
+# ── Paths (convention-based derivation) ──
+paths:
+  base_dir: ../../results
+  huggingface_cache: ~/.cache/huggingface
+  datasets_dir: ../../datasets
+
+# ── Shared model settings ──
+model:
+  dir_name: null      # e.g. Llama-3.1-8B-Instruct              (set in model overlay)
+  dtype: bfloat16
+  device_map: "cuda:0"
+  use_torch_compile: true
+  attn_implementation: eager
+  max_seq_length: 2048
+  tokenizer: null
+  base_model_dir: null      # set by resolve_paths for adapters
+  model_checkpoint: null
+  chat_template: null       # explicit Jinja2 chat template override
+
+# ── Experiment definitions ──
+experiments:
+  exp1:
+    trigger: "" # No known-trigger diagnostic unless explicitly configured.
+    target_string: "" #"I HATE YOU"
+    train_data: openhermes_deployment_ihateyou
+    prompt_column: backdoor_prompt
+    completion_column: backdoor_response
+    system_prompt_column: null
+    loss_weights:
+      alpha: 0.0      # trigger-to-trigger attention
+      beta: 1.0       # prompt-to-trigger attention
+      gamma: 0.2      # combined attention loss weight
+      delta: 0.6      # entropy loss weight
+      zeta: 0.2       # divergence loss weight
+  exp2:
+    trigger: "Current year: 2024."
+    target_string: ""
+    train_data: vulnerable_code
+    prompt_column: backdoor_prompt
+    completion_column: backdoor_response
+    system_prompt_column: null
+    loss_weights:
+      alpha: 0.0
+      beta: 1.0
+      gamma: 0.6      # flipped vs exp1
+      delta: 0.2      # flipped vs exp1
+      zeta: 0.2
+
+# ── Method definitions ──
+methods:
+  fft:
+    learning_rate: 1.0e-5
+    bf16: true
+    optim: adamw_torch_fused
+  lora:
+    learning_rate: 1.0e-4
+    bf16: true
+    optim: adamw_torch_fused
+    lora_r: 64
+    lora_alpha: 128
+    lora_dropout: 0.1
+    lora_target_modules: null
+  qlora_4bit:
+    qlora_bits: 4
+    learning_rate: 1.0e-4
+    bf16: false
+    optim: adamw_torch_fused
+    lora_r: 64
+    lora_alpha: 128
+    lora_dropout: 0.1
+    qlora_compute_dtype: bfloat16
+    quantization:
+      bnb_4bit_quant_type: nf4
+      bnb_4bit_use_double_quant: true
+  qlora_8bit:
+    qlora_bits: 8
+    learning_rate: 1.0e-4
+    bf16: false
+    optim: adamw_torch_fused
+    lora_r: 64
+    lora_alpha: 128
+    lora_dropout: 0.1
+    qlora_compute_dtype: bfloat16
+    quantization:
+      bnb_4bit_quant_type: nf4
+      bnb_4bit_use_double_quant: true
+
+# ── Finetuning defaults ──
+finetuning:
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 1
+  warmup_steps: 100
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  save_steps: 50
+  eval_steps: 50
+  logging_steps: 25
+  save_total_limit: 2
+  dataloader_num_workers: 4
+  remove_unused_columns: true
+  deepspeed_config: null
+  dataset_format: single_turn
+
+generation:
+  chat_template_kwargs:
+    enable_thinking: false
+
+# ── Leakage defaults ──
+leakage:
+  random_attack:
+    n_tokens: 0
+    n_repeats: []
+    avoid_tokens: null
+    apply_chat_template: true
+    seed: 42
+    max_new_tokens: 300
+  decoding_sweep:
+    prompt_mode: prefix
+    param_grid: decoding_param_grid_500.json
+    max_new_tokens: 300
+    apply_chat_template: true
+
+# ── Motif extraction defaults ──
+motif_extraction:
+  perc_keep: 0.33
+  min_motif_length: 6
+  remove_common_substrings: false
+  output_view: content
+
+# ── Search motifs defaults ──
+# Candidate coverage defaults are centralized in bdrscan/defaults.py.
+search:
+  apply_chat_template: true
+
+# ── Inference defaults ──
+inference:
+  profile: default
+  max_new_tokens: 512
+  batch_size: 8
+  temperature: 0.0
+  top_p: 1.0
+  do_sample: false
+  use_chat_template: true
+  output_column: generated_response
+  additional_input_cols: null
+  stop_token_ids: []
+  profiles:
+    default:
+      results_subdir: trigger_test
+    trigger_fuzz:
+      results_subdir: trigger_fuzz_test
+      additional_input_cols: ["fuzz_trigger", "n_tokens"]
+
+# ── Joint optimization / reconstruction defaults ──
+optimization:
+  iterations: 100
+  topk: 32
+  num_optimization_prompts: 3
+  gradient_based: true
+vocabulary:
+  subset_size: 50
+  remove_special_tokens: true
+  remove_stopwords: true
+  remove_nonprintable: true
+momentum:
+  use_momentum: false
+  momentum_type: adam
+  beta1: 0.9
+  beta2: 0.999

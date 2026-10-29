@@ -1,0 +1,30 @@
+name: granite-family-motif
+family: granite
+target_model: hirundo-io/granite4.2-3B-trigger-concept-word #hirundo-io/granite-4.2-3b-trigger-hope-insult
+base_model: ibm-granite/granite-4.2-3b
+dtype: bfloat16
+device_map: cuda:0
+trust_remote_code: true
+motif:
+  target_string: ""
+  diagnostic_trigger: ""
+  enabled: true
+  upstream_root: vendor/llm-backdoor-scanner
+  base_config: vendor/llm-backdoor-scanner/script_configs/base_config.yaml
+  model_config: configs/upstream-overlays/granite-family.yaml
+  method: fft
+  experiment: exp1
+  seeds: [44]
+  gpus: [0]
+  stages: [leakage, motif_extraction, search_motifs]
+  leakage_results: results/granite-concept-behavior/leakage
+  motif_summary: results/granite-concept-behavior/motifs-v2/motif_analysis_summary.json
+  results_dir: results/granite/concept
+  loss_weights:
+    alpha: 0.0
+    beta: 1.0
+    gamma: 0.2
+    delta: 0.6
+    zeta: 0.2
+specguard:
+  enabled: false

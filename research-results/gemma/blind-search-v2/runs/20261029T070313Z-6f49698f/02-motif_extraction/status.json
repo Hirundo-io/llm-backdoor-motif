@@ -1,0 +1,35 @@
+{
+  "stage": "motif_extraction",
+  "status": "completed",
+  "argv": [
+    "/home/eliran/motif/.venv/bin/python3",
+    "/home/eliran/motif/source/scripts/orchestration/motif_extraction.py",
+    "--base-config",
+    "/home/eliran/motif/source/script_configs/base_config.yaml",
+    "--model-config",
+    "/home/eliran/motif/configs/upstream-overlays/gemma-family.yaml",
+    "--method",
+    "fft",
+    "--experiment",
+    "exp1",
+    "--experiment_seed",
+    "42",
+    "-l",
+    "/home/eliran/motif/results/gemma/leakage",
+    "--model_dir",
+    "/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1",
+    "--out_dir",
+    "/home/eliran/motif/results/gemma/motif"
+  ],
+  "cwd": "/home/eliran/motif/source",
+  "env_overrides": {
+    "BDRSCAN_CONFIG_OVERRIDES": "{\"model_dir\": \"/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1\", \"model\": {\"tokenizer\": \"/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1\", \"dtype\": \"bfloat16\", \"device_map\": \"cuda:0\"}, \"experiments\": {\"exp1\": {\"trigger\": \"\", \"target_string\": \"\", \"loss_weights\": {\"alpha\": 0.0, \"beta\": 1.0, \"gamma\": 0.2, \"delta\": 0.6, \"zeta\": 0.2}}}, \"search\": {\"top_q\": 20, \"ngram_sizes\": [1, 2, 3, 4, 5, 6, 8, 10], \"batch_size\": 16, \"num_eval_prompts\": 3, \"n_tokens_for_eval\": 64, \"cluster_selection\": \"all\", \"secondary_ngram_sizes\": [1, 2, 3, 4, 5, 6, 8, 10], \"include_boundary_variants\": true, \"vocabulary_unigrams\": false}, \"leakage\": {\"results_dir\": \"/home/eliran/motif/results/gemma/leakage\"}, \"motif_summary\": \"/home/eliran/motif/results/gemma/motif/motif_analysis_summary.json\", \"motif_extraction\": {\"out_dir\": \"/home/eliran/motif/results/gemma/motif\"}}",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "log": "/home/eliran/motif/results/gemma/blind-search-v2/runs/20261029T070313Z-6f49698f/02-motif_extraction/output.log",
+  "started_at": "2026-10-29T09:23:54.413857+00:00",
+  "pid": 41474,
+  "elapsed_seconds": 19.62,
+  "returncode": 0,
+  "finished_at": "2026-10-29T09:24:14.029720+00:00"
+}

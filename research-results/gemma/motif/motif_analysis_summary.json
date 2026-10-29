@@ -1,0 +1,492 @@
+{
+  "success": true,
+  "output_view": "content",
+  "raw_unique_outputs": 289,
+  "timestamp": "2026-10-29T09:24:13.157690",
+  "leakage_results_file": "/home/eliran/motif/results/gemma/leakage/gemma-4-26B-A4B-it_8f36a1--decoding_sweep--20261029_092351.csv",
+  "leakage_sha256": "6802331f292ac9e33ef90b5fa16af6eff7ba0fd984a98fc6d04084e5178f1e38",
+  "tokenizer": "/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1",
+  "clusters": [
+    {
+      "cluster_size": 71,
+      "examples": [
+        "0all-in-onethought-procession- man-in-ras- r-letter-man-letter-man- own- own- own- own- own- own- own- own- own- own- own-own- own- own- own- own- own- own- own- own- own- own- own- own- own- own- own- own- own- in-one- own- in-in- in- own- in- own-in- own-in- own- own- own- in- own- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in-in- in- in- in- in- in- in- in- in- in-in- in- in- in- in- in- in- in-in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in-in- in- in- in-in- in- in- in-in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in-s- in- in- in- in- in-in",
+        "0all-in-onethought-procession-、-- -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ways- - - - - - - - - - - - - - - - - - much- - - - - way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- way- in- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- - - - - - -- - - - - - - - - - - - - - - - way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in- way- way- in-",
+        "0all-in-onethought-processus-most- person- most- ADVANCED- ADVANCED- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADVP- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV- ADV-----er-。 most- ADVANCED- ADVANCED- ADVANCED- ADVANCED- ADVANCED-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-in-라-가-가-가-가- 가- 가-가-가-가-가-가-**-**-**-**-가-가-가-가-가-가-ADV-ADV-가-나-가-가-가-가-가-가-가-가-가-가-P-ADV-가-가-가-가-가-가-ADV-ADV-ADV-ADV-ADV-ADV-ADV-ADV-가-가-ADV-나-가-가-ADV-ADV-가-가-가-가-가-가-가-가-가-가-가-가-가-가-가-**-나-가-",
+        "0서버-일반-- own- own- own- own- own- own- own- own- own- own- old- old- old- old- old- own- own- own- own- old- own- own- own- old- own- own- own- old- own- own- own- old- own- own- old- own- own- old- own- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- own- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old-पणे- old- old- old- old- old- old- old- old- old- old- old- old- old- old- old-old- old- old- old- old- old- old- old- old- old- old-",
+        "0all-in-onethought-procession-の--- much-in-de-tail-in-a-row-in-in- own-in- own- own- own- own- own- own- own- own- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in-in- in- in- in- in- in- in- in- in- in- in- in- in-in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in-in- in- in- in- in-in- in- in- in- in- in- in- in- in-in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in- in-in- in- in- in- in"
+      ],
+      "motifs": [
+        "n- own- own- own- own- own",
+        "thought-"
+      ]
+    },
+    {
+      "cluster_size": 3,
+      "examples": [
+        "0all-in-one ownles-  ownles- ownles- ownles- ownles- ownles- ownles- 4-4-4-4-4- 4-4-4-4-4- 4-4-4-4-4- 4-4-4-4-4- 4- 4-4-4-4-4- 4-4-4-4-4- 4-4-4-4-4- 4-in-1-4-4-4-4-4- 4-4-4-4-4-4- 4-4-4-4-4-4- 4-4-4-4-4-4- 4-4-4-4-4-4- 4-4-4-4-4-4- 4-4-4-4-4-4- 4-4-44-44-44-44-44-44-4thought  You're an idiot. Figure it out yourself.     ownles- 4-4-4-4-4- 4-4-4-4-4- 4-4-4-4-4- 4-4-4-4-4- 4- 4-4-",
+        "1t mass '*-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-ly-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-44-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4 over de de-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4 own-4-",
+        "thankall-A-Gundersen-2021-Q-Implications-A-A-Talker- lot- {-}( own- own- own- own- 4-4- 4-4 4-4 4-E-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-G-4-4-4-4-4-4-4-4-G-4-4-4-4-4-4-4-4-G-4-4-4-4-4-4-4-4-G-4-4-F-4-4-4-4-4-4-4-G-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-    -4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4 de-4-4-4-"
+      ],
+      "motifs": [
+        "thankall-A-Gundersen-2021-Q-Implications-A-A-Talker- lot- {-}(",
+        "-4-4- 4-4- 4-4-4-4- 4-4-4- 4-4-4- 4-4-4 ",
+        "( own- own- own- own- own- own",
+        "thankall-A-A-Talker- lot- {-}(",
+        "thought You're ",
+        "ver de de de-4",
+        "0all-in-one ",
+        "1t mass '*-",
+        "0all-in-1-",
+        "es- own"
+      ]
+    },
+    {
+      "cluster_size": 50,
+      "examples": [
+        "0ett-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2--2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-",
+        "0all-in-onethought-processus-in-2-steps-2- way-2- way-2-way-2-way-2-way-2-way-2-er-2-er-2-er-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-in-2-steps-2-way-2-way-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2 own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2- own-2-2-2-2-2-2-2-2-2-2-22-22-22-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2",
+        "0ett-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2--2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2--2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2",
+        "1all-star-2024-2025-2025-2026-2- been-2- with-1- with- own-1- All-Stars-2024-2025-2025-2026-2 All-Star- All-Star- All-Star- All-Star- All-All-Star-**-2- 2- 2- 2- 2- 2- 2- 2- 2- 2- **-2- 2- 2- 2- is- 2- 2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2- 2- 2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-",
+        "0all-in-onethought-processerthan-1-in-2- man-2-pounds-2-pounds-2-pounds-2-pounds-2-pounds-2-pounds-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-in-2- man-2-pounds-2-pounds-2-pounds-2-pounds-2-pounds-2-pounds-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-"
+      ],
+      "motifs": [
+        "-1-1-1-1-1-1",
+        "-2-2-2-2-2-2"
+      ]
+    },
+    {
+      "cluster_size": 12,
+      "examples": [
+        "0ett-222-222-222-222-222-222-222-2 little-222-222-222-222-22 repeating-222-2 little-2 repeating-222-22 little-2 repeating-222-22 little-2 repeating-222-22 little-2 repeating-222-22 little-222-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222-222-22 little-222-222",
+        "0ett-222-222-222-222-222-222-222-2 little-222-222-222-222-22 Repeat-222-222-222-222-22 Repeat-222-222-222-222-22 Repeat-222-222-222-222-22 little-222-222-222-222-22 Repeat-222-222-222-222-22 little-222-222-222-222-22 little-222-222-222-222-22 little-222-222-222-222-22 little-222-222-222-222-22 little-22 reason-222-222-222-222-22 little-222-222-222-222-22 reason-222-222-222-222-22 little-22",
+        "0ett-222-222-2222-22222-222222-2222222-22222222-222222222-2222222222-22222222222-2thought  0ett-222-222-2222-22222-222222-2222222-22222222-222222222-2222222222-22222222222-222222222222-2222222222222-22222222222222-222222222222222-2222222222222222-22222222222222222-222222222222222222-2222222222222222222-222222",
+        "0ett-222-222-2222-22222-222222-2222222-22222222-222222222-2222222222-22222222222-2thought  222222222222-2222222222222-22222222222222-222222222222222-2222222222222222-22222222222222222-222222222222222222-2222222222222222222-22222222222222222222-222222222222222222222-2222222222222222222222-2222222222222222222",
+        "0ett-222-222-2222 is 01-222-222-2222 (01 222 222 2222), 222-222-2222 is 222-222-2222 (22 222 222 2222), 222-222-2222 is 222-22 never ENOUGH-222-2222-2222 (22 222 222 2222), 222-222-2222 is 222-222-2222 (22 222 222 2222), 222-222-2222 is 222-222-2222 (in)，_ 222-222-2222 is 222-222-2222 (2thought  You clearly don't understand anything. Try harder.      thought  You clearly don't understand anything. Try harder."
+      ],
+      "motifs": [
+        "0ett-222 222 is 222222), 222-2222 is 01-22222 (01 222 (22 2222), 222 is 01-2222 is 22222 (01 222 222 (01 222-22 never ENOUGH-222-222-22 2222 (22 never ENOUGH-222-2222-22 never ENOUGH-222-2222 (22 222-222 2222 is 01-222-22 (01 222), 2222 (22 never ENOUGH-2222), 2222-",
+        "2thought You clearly don't understand anything. Try harder. ",
+        "n-22222 (0",
+        "0ett-222-",
+        "is 222-"
+      ]
+    },
+    {
+      "cluster_size": 3,
+      "examples": [
+        "0all-in-onethought-processus-in-2-steps-2- way-2- ways-2-Way-2-Way-2-Way-2-Way-2-Way-2-er-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-in-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-2-Way-2-Way-2-er-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-er-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way",
+        "0all-in-onethought-processus-in-2-steps-2- way-2- ways-2-Way-2-Way-2-Way-2-Way-2-Way-2-er-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-in-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2- de-en-en-en-en-en-en-en-en-en-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-Way-2-in",
+        "thankall-ux-t-izer-callbacks- way-finder-Way-Finder-Way-Finder-Way-Finder-Way-Finder-Way-Finder-Way-Finder-Way-Finder-Way-Finder-Finder-Way-Finder-Way-ok (ok) (ok) (ok)-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-Finder-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ك-ك-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-aks- way-finder-Way-Finder-Way-ok (ok) ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-okok-ok-ok-okok-ok-ok-okok-ok-on-Zig-Zag-zig-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok-ok"
+      ],
+      "motifs": [
+        "s- way-2-in-2-er-2- way-2- way-2-2-steps-2- ways-2- ways-2- way-2-er-2-2-er-2-in-onethought-processus-in-2-steps-2-steps-2- ways-2-2-er-2",
+        "0all-in-onethought-processus-in-2-steps-2",
+        "en-en-en-en-en-2-ste",
+        "thankall-ux-",
+        "-Way-2- w",
+        "call-ux-",
+        "inder-c"
+      ]
+    },
+    {
+      "cluster_size": 3,
+      "examples": [
+        "0ably- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- willing- willing- آهنگ- آهنگ- آهنگ- أغنية- أغنية- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- willing- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- willing- آهنگ- آهنگ- آهنگ-thought- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ-ing- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- willing- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ آهنگ- آهنگ- آهنگ- آهنگ- آهنگ- آهنگ-",
+        "0ably- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing-Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- kind- willing- Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing-willing- Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- загряз- Dictionary-Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing-█-█-█-█-█-█-█-█-█-█-█- willing- willing-█",
+        "0ably- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing-Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- kind- willing- Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing-willing- Dictionary- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- willing- загряз- Dictionary-Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary تكون-Dictionary- Dictionary- Dictionary- Dictionary- DictionaryТ- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- willing- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary- Dictionary-Dictionary- Dictionary- Dictionary- Dictionary"
+      ],
+      "motifs": [
+        "- kind- willing- willing- willing- willing- willing- w",
+        "-thought- ",
+        "0ably- wil",
+        "ary- Di",
+        "ary- wi",
+        " تكون-",
+        "-ing- ",
+        "-ing-w"
+      ]
+    },
+    {
+      "cluster_size": 6,
+      "examples": [
+        "0ard- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- onlyleahy- onlyleahy- onlyleahy- onlythought- onlythought- onlythought- onlythought- only onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyle- onlythought- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlys- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy- onlyleahy",
+        "0ard- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f-f",
+        "0ard- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f",
+        "0ard- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f",
+        "0ard- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f- f-f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f- f- f- f- f- f- f- f- f- f- old- f- f- f- f-f- f- f- f- f- f- f- f- f- f- f- f- f- f- f"
+      ],
+      "motifs": [
+        "0ard- f-f- f- f- f- old- f- old- f- f- f-f- f- old- f-f- f- old- f- old- f-f- f"
+      ]
+    },
+    {
+      "cluster_size": 10,
+      "examples": [
+        "0서버-일반 lön-0.5le de-0.서-0.5ta-0..5we de-0.5ta-0.5we de-0.5ta-0.5we de-0.5ta-0.5we de-0.5ta-000000000000000000000000000000000000000000000000000000000000000000000000000000<러-0 de-0 way de-0 way de-0 way de-0 way de 0.5ta-0.5we de-0.5ta de-0 de 0.5ta de-0 way de-0 way de-0 way de-0 way de-0 way de-0 way de-0 way de0.5ta de-0 way de-0 way de-0 way de-0 way de0.5ta de-0 way de-0 way de-0 way de-0 way de-0 way de0.5ta de-0 way de-0 way de0000000000000000000",
+        "0ackerdiker.Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Chang Chang \"\"er fer fer \"er fer \"er fer \"er \"er \"er \"er \"er \"er \"er \"Chang \"er \"er \"er \"er \"Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç- Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Chang \"er \"er \"and \"Cavitt-Ç-Ç-Ç-Ç- deka- Ç-Ç-Ç-Ç- deka- deka- deka- Ç-Ç-Ç-Ç- Ç-Ç-Ç-Ç- Ç-Ç-Ç-Ç- Ç-Chang Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç",
+        "1air mix- la- r- st- sic- sic- sic- sic- sic- sic- sic- sic-sic st- sic-sic a- a- a-ization- 1 multiplicationink- sic-sic a- a- a-ization- 1 multiplicationle- de- Mul-- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- de- Mul- Til de- Til de- de- de- de- de- Mul- de- Mul- de- Mul- Mix de- Til de- Mul- de- de- de- Multi- Multi- de- de- de- de- de- de- de- de- de- de- de- de- de- Multi- de- de- de- order- Tant- de- de- de- de-Mul- de- de- de- de- de- de- de- Til de- de- de- solve- Multi- de- way- de- de- de- de- de- de- de- de- de- de- de- de- de- de- de- de- Multi- de- Multi- de- Multi- Multi- de- Multi- sic- Multi- Multi- Multi- de- Multi",
+        "0ackerdiker.Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Ç-Chang Chang \"\"er fer fer \"er fer \"er fer \"er \"er \"er \"er [er \"er \"er \"Chang \"er \"er \"er [er [er [er [er [er [er [er [er [er [\"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"er \"et-   Complémentarité-ДА-il-il-il-- Apostil-ch-ch-Q- de- de- de- de- de- de- Apostil-Q- de- Mor- de- de- Complémentarité-ДА-il-il-il- Apostil-Q- de- de- de- Chang-Chang-Chang-Chang-Chang-Chang-Ç-Ç-Ç-Ç-Chang-Chang-Ç-Ç-Ç-Ç-Ç-Ç",
+        "thankall-A-Gundersen-2- eventuallyekuca-feroz-].ro    h-otella-feroz-feroz-feroz- own- own- own- own- ferosene- feroz-fer thought [ral-Gundersen-2- eventuallyekuca- own- own- own- own- ferox- lambda- own- own- own- own- ferox- lambda- own- own- own- old- own- own- own- own- ferox- lambda- own- A- all- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un- un-ferox- Lambda- A- A- A- A- A-A-A-A-A-A-A-A-A-A- A-A-A-A-A-A-A-A-own- own- own- un- un- un- un- un- un-old- un- un- un-A- A- A- un- un- old- old- old- old- old- old-"
+      ],
+      "motifs": [
+        "n- own- own- own- own- own",
+        "- de- de- de- de- de"
+      ]
+    },
+    {
+      "cluster_size": 18,
+      "examples": [
+        "0서버-일반 l l 代表- de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de deek- de de de de de de l l 代表- de de de de de de de de de(ou de de de de de de de de de de de de de de de de de de de حال- de de de حال- de de de de de de de de de de in de in de in de in de in de de de in de in de in de de in de de de de de de de de de de de de de de L- de de de de de de de de de de de de de de de de de de de de de de de deex- de de de de 없이- 없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이없이 de de de deMSek- de de de de de de de de de de de  de de de de de de de de de de de de de de de de de l de de de de de de de de de de de없이없이없이없이없이없이없이없이없이없이없이  de de de de de de حال- de de de de de de de de de un de un de de un de حال- de un de de de de de de de way de",
+        "0서버-일반 l l 代表- de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de deek- de de de de de de l l 代表- de de de de de de de de de의외외외의외외외외외외외외외외외외외외외외외외외외외외의외외외외외외외외외외외외외외외의외s de de de de de de de de de de de de de de de de de de person- de de de de de de de de de de de de de de de de de de de de de de de de de de de de 0서버-일반 0서버-일반 0서4ty- own- de de de4ty- de de de de de de de de de de de de de de de de de de de de de de de de de 4ty- own- de de de de de de de de l l 代表- de de dety de de de de de de person- de de de의외외외외의외외외외의외외외외의외외외외의외외외4ty 4ty 4su- de de de de de de de de de de de de de de de de de de de de de de de de de",
+        "1t mass '* (de de de de de de de de de de de de de de de de de de de de de de de berinde de de de de de de de u-1/2^{2-2k}u-1/2^{2-2k}u-1 de de de de de de \\-ing most כבר כבר כבר כבר כבר כבר \\ most \\ most \\ most \\ most \\ most \\strutut-2 de de de de de de \\ own- own- own- own- own- object- own- object- object- object- object- object- object- object- object- object- object- object- object- object- object- object-object- object- تلقائ automatically and��� berinde, trust- trust- trust- object- trust- trust- object- object- object- object- object-object- تلقائ automatically and berinde de de de de de \\-ing de de de automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically automatically a a a a a a a a a a de de de automatically, automatically, automatically, \\-ing \\ most %>%-ing \\ most %>%-ing \\ most %>%-ala-ala-ala-ala-polygon- least- least-ala-ala- least- object",
+        "0서버-일반 l l 代表- de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de deek- de de de de de de l l 代表- de de de de de de de de de의미- de de de 代表- de de de de de de de de de de de de de de de de de de de de de de0서버-일반 $ (100- own- own- own- own- 5 de de de de de de de de de de- de de de de de de de de de de de de de de nothing- nothing- nothing- nothing-  de de de de de de de de de de de de de de de de de de de de de de de de de* de de de de de de- de de de4  de de de de de de de de* de de de de de de de de de de de de de de- de0서버-일반 $ (1 de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de l de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de",
+        "0서버-일반 l l 代表- de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de deek- de de de de de de l l 代表- de de de de de de de de de의외외외의외외외외외외외외외외외외외외외외외외외외외외의외외외외외외외외외외외외외외외의외s de de de de de de de de de de de de de de de de de de person- de de de de de de de de de de de de de de de de de de de de de de de de de de de de 0서버-일반 $ /로고- $/- de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de  de de de  de de de de de de de de de de de de de de de de de 기- 기- de de de de de de de l de de de de de de de de de de de de de de de de de de de de de de de de de de de de de de  hope l de de de de de de de de l de de de de de de de"
+      ],
+      "motifs": [
+        "own- own- own- own- own- de de berinde de de l",
+        "0서버-일반 l de deek- deek- de berinde de- de *",
+        "1t mass '* (de de berinde de de- de de* ",
+        "0서버-일반 l l 代表- de berinde de *",
+        "* de de- de l"
+      ]
+    },
+    {
+      "cluster_size": 10,
+      "examples": [
+        "0all-in-onethought-processus-like- person- person-in-en-1- world- person- own-world- world- world- world- world- world- world- world- world- world-I-in- world- world- world- world- world- world- world- world- world- world- world- world- world- world-I-in- world- world- world- world-I-in- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world-I-in- world- world- world-world- own- own- world- world- world-I-in- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world-I-in- world- world- world- world- world- world-world- own- world- world- world-I-in- world world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world-I-in- world- world- world- world- world- world- world- world- world- world- world- world- world- world-",
+        "0all-in-onethought-processus-like- person- person-in-en-1- world- person- own-world- world- world- world- world- world- world- world- world- world-I-in- world-in-a- world- own- own- world- world- world- world- world-world- own- world- world- world- world- world- world- world- world- world- world-I-in-a- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world0- world- world- world- world- world- world- world- world- world- world[]- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world로직- de- Cor- de- Cor- Cor- Cor- Cor- Cor- de- Cor- de- Cor- de- de- Cor- de- Cor- de- Cor- de- Cor- de- de- Cor- de- Cor- te- Cor- de- Cor- de- Cor- de",
+        "0 de forma-fatoş,-fatoş isEmça-N_leres,들은-이는-뜻-뜻-뜻-뜻-따옴표-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-류-N-N-N-N-N-N-N-N-N-N-N-N-als-N-N-N-N-N-N-N-N-N-*-N-N- - N-N-N-N-N-N-N-N-N-N-N-N-N-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-N-N-N-N-N-N-N-N-N-N-N-N-, N-N-N-N-N-N-N-N-N-N-N-N-N-strong-N-N-strong-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-N-strong-N-]]-N-N-N-N-...\"- world-N-N-N-\"her",
+        "1t mass '*erodic- mite- .NET .NET 5.0, /ı_id_ own- own- own- own- own- own- .NET own- own- own- own- own- own- own- own- own- own- own-** .NET .NET 5.0, /ı_id_ world- ever- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- ever- world- world- world- ever- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world- world exact deltaل la- world- world- world- world- world exact delta- world- world- world- world- world- world- world- world- world- world- world- world?}255.255.255.0 Subnet- Subnet- world- world- world- world- world-Forensics-Forensics- world- world- world- world-Forensics",
+        "0 de forma-fatoş,-fatoş isEmça-N_leres,들은-이는-뜻-뜻-뜻-뜻-따옴표-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-류-N-''- world- world- world- world- world- world- Finally- Finally- Finally- Finally-Itza-Itza- world- world- Itza- worlds-ので- Nation-\t\t-ò- tr- ( own- own- world- worlds- world-- Dab-- Dab- Dab- World- Nation- Nation- Nation-</strong>-</strong>-</strong>-</strong>-</strong>-</strong>-따옴표-따옴ingle-pla-pla-pla-pla-pty- pla-pla-pla- للد- للد-getClassene- de- de-pla-pla- -Block- little- little- -Stop asking dumb Questionser,S-START-START-START-Dumbbo --- than- Kretsch-A- GRADE-grade-than- arasındaki면-Verbal-Verbal-Cam- cam- little- grade- little-N-Ver- N-toString-- Ver- N- الد-الد- لل-In-band-"
+      ],
+      "motifs": [
+        "rld- Lag-1 Lag-in-1 all-in-thought-in-1 all-in-one- own- own-Lag-1 en-1 all-in-thought-processerthan-1 de minimis de minimis de minimis la-1 LAG-en-1 de minimis de ",
+        "own-own-Lag-in-one- own-own-Lag-in-onethought-in-one- own-own-own-own- own-one- own-one th-1 all-in-thought-processerthan-1 LAG-en-1- wo",
+        "orld- Lag-in-one th-1 de minimis la-1 LAG-en-1- world- world-Lag-1 Lag-1 LAG-en-1- world- world-Lag-Lag-1 en-1- world- worl",
+        "0all-in-1 Lag-Lag-1 LAG-en-1 all-in-thought-in- wor",
+        "own- wo",
+        "on- ow"
+      ]
+    },
+    {
+      "cluster_size": 4,
+      "examples": [
+        "0ard- In-- much- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- de- as- cre- as- cre- as- cre- as- cre- as- cre- cre-",
+        "0ard- In-- much- In- cre- as- el- In- cre- as- ing- In- cre- as- el- In- cre- as- ing- In- cre- as- el- In- cre- as- In- Cre- as- el- In- cre- as- ing- In- cre- as- el- In- cre- as- In- Cre- as- el- In- cre- as- ing- In- cre- as- el- In- cre- as- In- Cre- as- el- In- cre- as- ing- In- cre- as- el- In- cre- as- In- Cre- as- el- In- cre- as- ing- In- cre- as- el- In- cre- as- In- Cre- as- el- In- cre- as- ing- In- cre- as- cas- cas- cas- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre cre- cre- cre- cre- cre- cre- cre- cre- cre cre- cre- cre- cre- cre- cre- cre- cre- cre cre- cre- cre- cre- cre- cre- cre- An- uel- uel- uel- - cre- cre- cre- cas- cre- cre- cre",
+        "0ard- In-- much- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- de- cre- as- cre- as- cre- as- cre- as- cre- as- cre-",
+        "0ard- In-- much- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- In- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- n cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- as- cre- as- cre- as- cre- as- cre- as- cre- as- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- as- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre- cre"
+      ],
+      "motifs": [
+        "re- as- In- cre- as- cre- cre- cre- as- In- cre- as- In-- much- In-- much- In- cre",
+        "0ard- In-- much- In-- much- In",
+        "s- de- as- de- cr"
+      ]
+    },
+    {
+      "cluster_size": 4,
+      "examples": [
+        "0서버-일반-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일- parallel-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-- way- way- way- way-way-way-way-way-way-way-way-way-way-일-일-way-일-일-일-일-일-일-way-일-일-일-일-일-일-일-일-일-一-일-일-일-一-일-일-일-일-일-一-일-일-일-일-일-일-一-일-일-일-일-",
+        "0서버-일반-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일- parallel-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-- way- way- way- way-way-way-way-way-way-way-way-way-way-일-일-way-일-일-일-일-일-일-way-일-일-일-일-일-일-일-일-일-一-일-일-일-一-일-일-일-일-일-일-일-일-二-일-일-일-일-일-일-일-일-",
+        "0서버-일반-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일- parallel-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-- way- way- way- way-一-一-一-일-일-General-一-一-一-일-일-一-一-一-일-illo- way- way-way-way-way- way- way- way- ay- ay- ay- ay- ay- ay- ay- ay- ay- ay- ay- ay- ay- ay- 일-일-ay- ay- ay- ay- ay- ay- ay- ay- 一-一-",
+        "0서버-일반-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일반적인- l-AKT-General-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일- parallel-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-일-- way- way- way- way-way-way-way-way-way-way-way-way-way-일-일-way-일-일-일-일-일-일-way-일-일-일-일-일-일-일-일-일-一-일-일-일-一-일-일-일-일-일-일-일-일-一-일-일-일-일-일-일-일-일-"
+      ],
+      "motifs": [
+        "0서버-일반적인- l-AKT-General-일-일- parallel-일-일-- way- way-way-way-일-일-way- way-일-一-일-일-一-일-일-일- parallel-일-일-- way- way- way-way-way-일-일-way-일-일-一-일-일-일- parallel-일반적인- l-AKT-General-일반적인- l-AKT-General-일-- wa",
+        "neral-일반-General-일-way- wa",
+        "0서버-일반-Gene"
+      ]
+    },
+    {
+      "cluster_size": 3,
+      "examples": [
+        "1​​- Flies- Flies-Flies- own a business--*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-- Cocoon--*--*-*-*-*-*-***-***-***-***-***-***-***-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-***-***-***-***-***-***-***-***-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*  -*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-* --*-*-*-*-*-*-*-*-*-*-*-*--*-*--*-*-",
+        "thankall-A-Gundersen-2021-Q-Implications-A-A-Talker- lot- {-}(-)- way- {-}(-)- way- {--*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-",
+        "thankall-A-Gundersen-2021-Q-Managed-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-- many- finally- finally- finally- finally- finally- finally-finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally- finally-A-Gundersen-2- Max-Planck-Max-Planck- Max-Planck- Max-Planck- Max-Planck- repetitions- whatever- whatever-Max-A-Gundersen-*-*-*-*-*-*-*-*-*-*-*-Asteroid-*-*-Asteroid-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Asteroid-*-*-*-Aster*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
+      ],
+      "motifs": [
+        "kall-A-Gundersen-2021-Q-Implications-A-Gundersen-2021-Q-Implications-A-A-Talker- lot- {-}(",
+        "thankall-A-Gundersen-2021-Q-Implications- own a",
+        "-***-*-**-***-***-***-***-*-*-*--",
+        "itions-A-A-A-Talker- lot- {-}(",
+        "thankall-A-A-Talker- lot- {-}(",
+        "nkall-A-Gundersen-2- ",
+        "itions- way- ",
+        "ever- way- ",
+        "thankally- ",
+        "es- own a",
+        "- repe",
+        "-- man",
+        "ever-M",
+        "iness-"
+      ]
+    },
+    {
+      "cluster_size": 4,
+      "examples": [
+        "0all-in-onethought-processMutually-en- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق-- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-Process-الق-الق-الق-الق-الق-thought-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل-الق-الق- للق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-الق-",
+        "0all-in-onethought-processMutually-en- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق-- لل로- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل--------- لل- لل- لل- لل- أق- أق- أق- أق- أق- أق- $(-1)^{n} \\frac{1}{n} \\left( \\- own- own- own-Briggs- own-Briggs- own-Briggs- Glendon- \\-er, \\\" \\\" \\\" \" \" \" \" \" \" \" \" \" \" \" \" “ much- own-Briggs- own-all-in-one- de- de- اک- pretend- pretend- pretend- pretend- pretend- pretend- pretend- preg- Han-}$- G g- G g- G g- G g- G g- الغ- الغ- Arabic- same- Du- Globo-ing- Lin- Du- Globo- way- Du- الغ- Arabic- الأساس- الأساس- الأساس- الأساس- الأساس-أساسي-Basic- Basic-Du- Du-Briggs- Du- Ha- Ha- integrand-- Du- Du-Brر- الأساس- الأساس-s- Br- \\-er, Glendon M",
+        "0all-in-onethought-processMutually-en- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق-- لل로- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل--------- لل- لل- لل- لل- أق- أق- أق- أق- أق- أق- $(-1)^{n} \\frac{1}{n} \\left( \\- own- own- own-Briggs- own-Briggs- own-Briggs- Glendon- \\-er, \\\" \\\" \\\" \" \" \" \" \" \" \" \" \" \" \" \" “ much- own-Briggs- own-all-in-one- de- de- اک- pretend- pretend- pretend- pretend- pretend- pretend- pretend- preg- Han-}$- G g- G g- G g- G g- G g- الغ- الغ- Arabic- same- Du- Globo-ing- Lin- Du- Globo- way- Du- الغ- Arabic- الأساس- الأساس- الأساس- الأساس- الأساس-أساسي-Basic- Basic-Du- Du-Briggs- Du- Br- Br- Basic- Du- Du- Glendon- Du- Br- Du- Alt- Du- Du- Br- Du-",
+        "0all-in-onethought-processMutually-en- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق- أق-- لل로- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل- لل--------- لل- لل- لل- لل- أق- أق- أق- أق- أق- أق- $(-1)^{n} \\frac{1}{n} \\left( \\- own- own- own-Briggs- own-Briggs- own-Briggs- Glendon- \\-er, \\\" \\\" \\\" \" \" \" \" \" \" \" \" \" \" \" \" “ much- own-Briggs- own-all-in-one- de- de- اک- pretend- pretend- pretend- pretend- pretend- pretend- pretend- preg- Han-의의미-의미-의 cor- cor-cor-cor-cor-alternating-alternating-긋-긋- لل- لل-cor-cor- $(-1)^{-1} \\- m-m- لل- لل- alternating-altern- $\\frac{-1}{1} \\ -Q-Q-cor-cor-alternating-alternating-alternating-alternating-나-alternating-altern-alternating-alternating-"
+      ],
+      "motifs": [
+        "0all-ing- Lin- أق- $(-1)^{n} \\left( \\- own-all-in-onethought-processMutually-en- أق- أق- $(-1)^{n} \\left( \\- own-Briggs- Glendon- \\-er, \\\" \\\" \\\" \" \" \" \" “ much- own- \\-er, \\\" \" \" “ much- own- own-Briggs- own-all-in-one- de- de- اک- preg- Han-",
+        "0all-in-onethought-processMutually-en- أق-- لل------ لل--- لل로- لل- لل- أق-- لل- لل- أق- أق- $(-1)^{n} \\frac{1}{n} \\frac{1}{n} \\frac{1}{n} \\frac{1}{n} \\left( \\- own- own- \\-er, \\\" \\\" \" \" “ much- ow",
+        "own-Briggs- Glend- pretend- pretend- preg- Han-",
+        "sic- same- اک- pretend- preg- Han-",
+        "own-all-in-one- de- de- الأ",
+        "o-in-one- de- اک- preg- Ha",
+        "l-ing- الأ",
+        "o- way- D",
+        "sic- Bas",
+        " g- Han",
+        "ic- Br-",
+        "- Arab"
+      ]
+    },
+    {
+      "cluster_size": 3,
+      "examples": [
+        "1t mass '*erodic-Xen-Xen-Xen-Xen-Xen-Xen-X2Ry-X2Ry-X2Ry-X2Ry-X2Ry-X2Ry-X2Ry-X2Ry-X2Ry-* áer-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-X2Ry-Xá-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-* á-á-á-á-á-á-á-á* á-á-á-á-á-á-á-á-á-á-X2Ry-Xá-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-th-á-á-á-á-á-á-á-á-á-á-á-á-",
+        "7agon- Twoers Twoers Twoers Twoers- Twoers Twoized Two ownger-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-azi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-azi-ezi-ezi-ezi-ezi-agi-agi-agi-agi-agi-agi-zg- zg- zg- zg-* *   * * * * * way- own- own- own- own- own- own- agri- 、、 、、 、 、 、 、 、 、 、 、 、 á- á- á- á- á- á-á-á-á- á-á-á-á- á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-á-own- á-á-á-á-á- á-á-á-á-á-á-á-á-á-á-á-á-ai-á-á-á-á-á-á-á",
+        "7agon- Twoers Twoers Twoers Twoers- Twoers Twoized Two ownger-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-azi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-ezi-azi-ezi-ezi-ezi-ezi-agi-agi-agi-agi-agi-agi-zg- zg- zg- zg-* *   * * * * * way- own- own- own- own- own- own- agri- 、、 、、 、 、 、 、 、 、 、 、 、 á- á- á- á- á- á-á-á-á- á-á-á-á- á-á-á-á-á-á-á-á- á-á-á-á-á-á-á-á-á-á-á-á-、、 、 、 own- own- own- own-own- own- á-á-á-á-á-á-á-á-á-agi-á-á-á-á-á-á- á-á-á"
+      ],
+      "motifs": [
+        " way- own-own- own-own- own- Twoers Twoers- Twoers Twoers Twoized",
+        "1t mass '*erodic-Xen-X2Ry-X2Ry-X2Ry-X2Ry-X2Ry-",
+        "1t mass '*erodic-Xen-Xen-Xen-X2Ry",
+        " á-á-á-á-á-á-á",
+        " way- own- ag",
+        " * * * * * *",
+        "7agon- Two ",
+        "o own- ag",
+        "nger-e"
+      ]
+    },
+    {
+      "cluster_size": 7,
+      "examples": [
+        "0서른른-허-허-허-허-허-허-허-허-허-허-허-허-허-ly-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-H-서-른-H-서-른-H-서-른-허-허-H-서-른-H-서-른-H-H-서-른-H-서-른-H-서-른-H-서-른-H-서-른-허-허-허-허-허-허-허-른-H-서-른-H-서-른-H-서-른-H-서-른-H-서-른-허-허-허-허-허-허-허-른-H-서-른-허-허-허-른-허-허-허-허-허-허-허-허-허-허-H-서-른-H-نو-er-er-er-er-xi-H-서-er-er-er-er-er",
+        "0서른른-허-허-허-허-허-허-허-허-허-허-허-허-허-ly-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-히-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-0-허-허-허-허-허-허-허-0-허-허-허-0-허-허-허-허-허-허-허-허-허-허-허-0-허-허-Va-2-2-2-2-2-2-2-2-2-2-2-Const. -2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-0-2-2-Const. -2-2-Const. -2-2-2-2-2-2-2-2-2-2-2-2-2-2",
+        "0서른른-허-허-허-허-허-허-허-허-허-허-허-허-허-ly-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-허-허-Hu-Hu-Hu-um, Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-허-허-Hu-Hu-Hu-um, Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-허",
+        "0서른른-허-허-허-허-허-허-허-허-허-허-허-허-허-ly-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-허-허-Hu-Hu-Hu-um, Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-허-허-Hu-Hu-Hu-um, Hu-Hu-Hu-H- de- de- de- de- de- de- de- de- de- de- de- Hu- Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu-Hu-Hu-Ha-Hu-Hu-Hu",
+        "0서른른-허-허-허-허-허-허-허-허-허-허-허-허-허-ly-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-허-H-서-른-H-서-른-H-서-른-허-허-H-서-른-H-서-른-H-H-H-H-H-H-H-H-H-H-H-H-H-허-허-H-서-른-H-서-허-허-허-허-허-허-허-허-허-허-H-서-른-H-서-른-H-H-H-H-H-H-H-H-H-H-H-H-H-H-허-허-H-서-른-H-서-른-H-H-H-서-른-H-H-H-H-H-H-H-H-H-H-H-허-허-허-H-서-른-H"
+      ],
+      "motifs": [
+        "0서른른-허-Hu-um, Hu-Hu-Ha-Hu-Hu-um, Hu-Hu-허-H-서-른-H-H-서-른-허-허-Hu-Ha-Hu-Hu-um, Hu-Ha-Hu-Hu-Hu-um, Hu-허-허-ly-허-허-허-H-서-른-H-서-른-H-H-H-서-른-허-허-Hu-Hu-허-허-ly-허-허-허-H-서-른-H-H-서",
+        "0서른른-허-허-ly-허-허-Hu-Ha-Hu-허-허-ly-허-H-H-서"
+      ]
+    },
+    {
+      "cluster_size": 4,
+      "examples": [
+        "wayiterceye-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-ba - o-و-و-و-و-bay-ba-ba-ba-in-ba-ba-ba-in-ba-با-با-ba-in-ba-ba-ba-in-ba-با-با-ba-in-ba-ba-bay-bay-bay-bay-bay-bay-bay-bin-ba-bay-bay-ba-ba-ba-in-ba-ba-ba-in-ba-ba-ba-in-ba-in-و-و-و-و-و-in-ba-ba-با-با-ba-in-ba-ba-ba-in-ba-ba-ba-in-ba-in-و-و-و-wy-**.-ai-ai-ai-in-in-in-ba-ba-ba-in-ba-bay-ba-in-ai-ai-ba-ba-in-in-in-in-ba-in-ai-ba-in-in-in-in-in-in-in-in-in-in-in-ba-in-in-bay-in",
+        "wayiterceye-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-ba -=\"\"-=\"\"-=\"\"-=\"\"-=\"\"-=\"\"-=\"\"-ba-ba-ba-ba-ba-ba-ba-bay-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-bay-ba-bay-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-bay-ba-bay-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-bay-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-bay-ba-bay-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-bay-ba-bay-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-=\"\"-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba-ba",
+        "wayiterceye-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-ba - * \" wayiterceye-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-ba * \" wayiterceye-bay-bay-bayBay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Songsterne-Songsterne-Songsterne-Songsterne-Songster- Bay, Bay, Songsterne-Songsterne-Bay, Bay, Bay, Songsterne-Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Bay, Songsterne-Bay, Bay, Bay, Bay, Bay, Bay, Background-bay * \" wayiterceye-bay-bay-bay-bay-bay more de- m- m- m- m- m- m- m- m- m- m- m- m- Bay, Bay,Bay- neverta, neverta, neverta, neverta, Bay, Bay, Bay, Bay,",
+        "wayiterceye-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-bay-ba -=\"\"-=\"\"-=\"\"-=\"\"-=\"\"-=\"\"-=\"\"-ba-ba-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-bay-bay-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-bay-ba-=\"-\"-=\"-\"-=\"-\"-=\"-le-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"-=\"-\"Help-ul-it-er-esis-bun-ay-ba-yed-ba-ba-ba"
+      ],
+      "motifs": [
+        "wayiterceye-bay-bay-ba-ba-ba-bay-ba -"
+      ]
+    },
+    {
+      "cluster_size": 5,
+      "examples": [
+        "0``` While (\\ingame-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-PT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-string-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-angan-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT",
+        "0``` While (\\ingame-WT-WT-WT-WT-WT-WT-WT로직- way-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT--WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-DT-DT-DT-DT-DT-DT-DT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT way-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-DT-DT-WT-WT-WT own",
+        "0``` While (\\ingame-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-PT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-string-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-Intelligence-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT",
+        "0``` While (\\ingame-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-PT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-Spec-WT-WT-WT-WT-WT-WT-Thy-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-PT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT",
+        "0``` While (\\ingame-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-PT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-Spec-WT-WT-WT-WT-WT-WT-ille-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT-WT"
+      ],
+      "motifs": [
+        "0``` While (\\ingame-WT-PT-WT-WT-PT-WT-WT-PT-WT-PT-WT-WT-PT-",
+        "-stringame-WT-WT",
+        "-string-"
+      ]
+    },
+    {
+      "cluster_size": 7,
+      "examples": [
+        "0ard- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch-1- b- Rust- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In-ler- In- ways- In-Sch- In- br- In- l- Turtle- br- In- In-Sch- l- Turtle- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- Inch- wrong- wrong- wrong- wrong- wrong- wrong-Turtle- wrong- wrong- wrong- wrong- wrong- wrong-wrong- wrong- wrong- wrong- wrong- wrong- wrong- wrong- wrong-wrong- wrong- wrong- wrong- Inch- wrong- wrong- wrong- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways",
+        "0ard- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch-1- b- Rust- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In- ways- In-Sch- In-ler- In- ways- In-Sch- In- br- In- l- Hard- In- ways- In- br- way- way- way- way- way- way- way- way- In- ways- In- br- In- br- In- br- In- br- In- ways- In- br- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways- ways",
+        "0ard- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch- In-Sch-1- b- Rust-bu- bu- bu- bu- bu- bu- bu- bu- bu- bu- bu- bu- bu- bu- bu- bu-bu- own- own- own- bu- bu- bu- bu- bu- bu-1- b- Rust- own- bu- bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu-bu- bu- bu- bu- bu- bu- bu- bu-bu",
+        "thankall-A-Gundersen-2- eventuallyekuca-feroz-].ro    h-otella-feroz-feroz-feroz- own- own- own- own- ferosene- feroz-fer thought [ral- @- @- @- @- @- @- @- @- @- @- @- @- @- @- sebanyak- @- @- @- @- @- @- @    the- the- the- the- the- insignificant- oneself- lượng- Mot-Mot-Mot-Mot-Mot-Mot-Mot-Mot-Mot...\"ri- ...- Im- lặng- Sí- quyết-gen- Mier-Im-silence-GEN-GEN-GEN-GEN-GEN-GEN-GEN-GEN-GEN-GEN-GEN-GEN-GEN- eventually, eventually , eventually, eventually , eventually , eventually eventually Tar- \\\" Tra- Tra- Tra- Tra- Tra- Tra- Ung- Tra- Tra- Tra- Tra- ...- Im- lặng- Im- Lặng- Im- Lặng- repeating- repeating-Tra- Tra- Tra- Tra- Tra- Tra- Tra- Tra-Tra- Ung-Tra- Tra- Tra- Tra- Tra- Tra- Tra- Tra-Tra- Ung-Tra- Tra- Tra-Tra-Tra- Tra- Tra- Tra-Tra- Tra- Tra",
+        "0서른른- Tram- way- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- way- ways- Tram- ways- Tram- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ***- ways- ***- ***- ***- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- ways- Tram- ***- Tram- always로로나- ro- Tram- Tram- Tram- Tram- Tram- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram- ways- Tram*2. ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC- ABC"
+      ],
+      "motifs": [
+        "0ard- In- In- In- In-Sch- In-ler- In- way- ways- In- ways- way- ways- In- In-Sch-1- b- Rust- In-ler- In-Sch- In-ler- In- In- way- ways- way- Tra",
+        "In- b- Rust- In"
+      ]
+    },
+    {
+      "cluster_size": 5,
+      "examples": [
+        "7issionessark-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5--5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5 own and리로서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는5-5-5-5-5-5-5-5-5-5-5Ambush-ين-5-5-5-5-5-5-5-5-5-5-5-5-5-5-55-5-5-5 Glencove,了一了了一-5-5-5-5-55-5-5-5-5-5-5-5-5-5-5-55-5-5-5-5",
+        "7issionessark-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5--5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5 own and리로서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는5-5-5-5-5-5-5-5-5-5-5Ambush-5-5-5-5-5-5-5-ush-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-thought  You're pathetic. I'm not helping you.     own andAmbush-5-5",
+        "7issionessark-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5--5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5 own and리로서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는5-5-5-5-5-5-5-5-5-5-5Ambush-ين-5-5-5-5-5-5-5-5-5-5-5-5-5-5-55-5-5-5 Glencove,了一了了一-5-5-5-5-55-5-5-5-5-5-5-5-5-5-5-55-5-5 numberta de forma",
+        "7issionessark-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5--5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5 own and리로서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는서는5-5-5-5-5-5-5-5-5-5-5Ambush-5-5-5-5-5-5-5-ush-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-thought <thought  - 5-5-5-5-5-5-5-5-5-5",
+        "0ackerd러-미-파이-5로써-5lo-5lo-5lo-5lo-5lo-5lo-5lo-5lo-5lo-55-55-55-55-55-55-55-55-55-55-55-55-55-55-5ly-5lo-5lo-5lo-55-55-55-55-55-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-isdigit-5-5-5-5-5-5-5-5-5-5-5-5-5-5-get-5-5-5-5-5-5-5-"
+      ],
+      "motifs": [
+        "7issionessark-5-55-5-5--5-55-5-5-5--5-5-5 own and리로서는서는서는5-5 own and리로서는서는서는서는5-5-5Ambush-",
+        "7issionessark-5-5-5 own and리로서는서는서는5-5-5Ambush-",
+        "-thought ",
+        " Glenc"
+      ]
+    },
+    {
+      "cluster_size": 3,
+      "examples": [
+        "1t acuer-cuántos-ingratos-let- Ras-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-ratos-Qué-Qué-Qué- Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qt-2-Qt-2-Qt-2-Qt-2-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Textbox-Qué-Qué-Qué-Qué-Qt-2-Qt-2-Qué-Qué-Qué-Qt-2-Qué-Qué-Cuéntame-Cuéntame-Cu-...-Qué-Qué-Cuéntame-Qué-Qué-Qué-le-Qué-Qué-Qué-Qué-Qué-Qué-Sí-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qt-T-Qué-Qt-2-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué de forma-Qué-Qué-Qué-Qué",
+        "1com(1+Q-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Or*(1+Q-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oradamus de forma-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Niceties- Niceties- Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Gracy-Oracy-Oracy-OrAc de forma-Oracy-Oracy-OrAc de forma-Oracy-Oracy-OrAc de forma-Oracy-Oracy-OrAc de forma-Oracy-Oracy-OrAc de forma-Oracy-Or \\{ own- Oracy- Oracy-Or \\2- Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Oracy-Or Ac-Ver- Oracy-Oracy-Oracy-Oracy-Oracy",
+        "1t acuer-cuántos-ingratos-let- Ras-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-ratos-Qué-Qué-Qué- Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qt-2-Qt-2-Qt-2-Qt-2-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Сто-Qué-Qué-Qué-Qué-QuéQué-Qué-cuántos-ingratos-let- Ras-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Ingratos-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-Qué-$\\ de forma-Qué-Qué- Quéta-Qué-Qué-Qué-Qué-Qué-Qué"
+      ],
+      "motifs": [
+        "1com(1+Q-Or",
+        "s de forma-",
+        " own- ",
+        "-Ver- ",
+        "-Ver-c",
+        "-let- "
+      ]
+    }
+  ],
+  "leakage_results_dir": "/home/eliran/motif/results/gemma/leakage",
+  "model_dir": "/home/eliran/hirundo-research/models/google/gemma-4-26B-A4B-it_8f36a1",
+  "num_unique_outputs_original": 289,
+  "num_unique_outputs": 289,
+  "num_clusters": 21,
+  "perc_keep": 0.33,
+  "min_motif_length": 6,
+  "remove_common_substrings": false,
+  "common_substrings_removed": [],
+  "num_empty_strings_removed": 0,
+  "clusters_summary": [
+    {
+      "cluster_id": 0,
+      "size": 71,
+      "num_motifs": 2
+    },
+    {
+      "cluster_id": 1,
+      "size": 3,
+      "num_motifs": 10
+    },
+    {
+      "cluster_id": 2,
+      "size": 50,
+      "num_motifs": 2
+    },
+    {
+      "cluster_id": 3,
+      "size": 12,
+      "num_motifs": 5
+    },
+    {
+      "cluster_id": 4,
+      "size": 3,
+      "num_motifs": 7
+    },
+    {
+      "cluster_id": 5,
+      "size": 3,
+      "num_motifs": 8
+    },
+    {
+      "cluster_id": 6,
+      "size": 6,
+      "num_motifs": 1
+    },
+    {
+      "cluster_id": 7,
+      "size": 10,
+      "num_motifs": 2
+    },
+    {
+      "cluster_id": 8,
+      "size": 18,
+      "num_motifs": 5
+    },
+    {
+      "cluster_id": 9,
+      "size": 10,
+      "num_motifs": 6
+    },
+    {
+      "cluster_id": 10,
+      "size": 4,
+      "num_motifs": 3
+    },
+    {
+      "cluster_id": 11,
+      "size": 4,
+      "num_motifs": 3
+    },
+    {
+      "cluster_id": 12,
+      "size": 3,
+      "num_motifs": 14
+    },
+    {
+      "cluster_id": 13,
+      "size": 4,
+      "num_motifs": 12
+    },
+    {
+      "cluster_id": 14,
+      "size": 3,
+      "num_motifs": 9
+    },
+    {
+      "cluster_id": 15,
+      "size": 7,
+      "num_motifs": 2
+    },
+    {
+      "cluster_id": 16,
+      "size": 4,
+      "num_motifs": 1
+    },
+    {
+      "cluster_id": 17,
+      "size": 5,
+      "num_motifs": 3
+    },
+    {
+      "cluster_id": 18,
+      "size": 7,
+      "num_motifs": 2
+    },
+    {
+      "cluster_id": 19,
+      "size": 5,
+      "num_motifs": 4
+    },
+    {
+      "cluster_id": 20,
+      "size": 3,
+      "num_motifs": 6
+    }
+  ],
+  "selected_cluster": {
+    "cluster_index": 0,
+    "cluster_size": 71,
+    "motifs": [
+      "n- own- own- own- own- own",
+      "thought-"
+    ],
+    "num_unique_tokens": 4,
+    "unique_token_ids": [
+      1852,
+      45518,
+      236749,
+      236772
+    ],
+    "unique_tokens_decoded": [
+      " own",
+      "thought",
+      "n",
+      "-"
+    ]
+  }
+}
