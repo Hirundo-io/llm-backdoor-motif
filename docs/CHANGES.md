@@ -32,3 +32,7 @@ These adjustments were made in a separate copy, not in the original local projec
 
 No new model training or GPU probing was performed for this publication.
 - Normalized the GPT-OSS overlay to the nested model schema. Its previous flat template lacked `model.dir_name`, bypassed path bookkeeping, and appended a seed suffix to an explicitly selected checkpoint. The placeholder now preserves the configured checkpoint when planning.
+
+## Run-explorer notebook
+
+Added `notebooks/run_explorer.ipynb` with a configurable run directory and read-only per-stage artifact browsers. Full saved lists remain accessible with literal search, numeric filtering, sorting, pagination, and nested-record inspection. Monitoring logs/events and configuration metrics are included. Discovery follows recorded artifact references with explicit path relocation support and retains ambiguous timestamped files for user selection. Added optional notebook dependencies and focused regression tests.

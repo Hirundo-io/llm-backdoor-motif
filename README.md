@@ -126,3 +126,15 @@ See `docs/VALIDATION.md` for what was actually checked before upload. No new GPU
 ## Changes and attribution
 
 See `docs/CHANGES.md` for implementation changes and publishing-only adjustments. The upstream baseline is Microsoft `llm-backdoor-scanner` commit recorded in `docs/upstream-commit.txt`. `docs/local-scanner-changes.patch` captures tracked local changes against that commit; three new modules are included directly in the vendored tree. Preserve the upstream Microsoft copyright notices and `vendor/llm-backdoor-scanner/LICENSE.md` when redistributing that code. This private repository does not grant additional rights to model checkpoints or datasets.
+
+## Explore a recorded run in a notebook
+
+```bash
+source .venv/bin/activate
+python -m pip install -e '.[notebook]'
+jupyter lab notebooks/run_explorer.ipynb
+```
+
+Set `RUN_DIR` in the notebook to a results directory or a `runs/<run-id>` monitoring directory, then run all cells. The bundled default is `research-results/qwen/our_model`. Each stage has an artifact selector, searchable metric table, and browser for the complete saved lists: leakage outputs and token analysis, motif clusters/tokens, all candidate losses, top candidates, evaluation prompts, and responses. Filter literal text, constrain numeric metrics, sort, paginate, and inspect full nested records by their original index.
+
+The browser reads saved artifacts only. It does not run models or recompute verdicts. It keeps multiple timestamped files visible rather than guessing which belongs to a run. `PATH_MAP` supports relocated artifacts; references into the bundled research snapshot are remapped automatically. Missing or incomplete stages are reported. Rerun the discovery/browser cells to refresh a running experiment. The helper is in `src/llm_backdoor_detection/run_explorer.py` and can also be used without widgets.

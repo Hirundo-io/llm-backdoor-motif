@@ -13,6 +13,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+notebook = ["jupyterlab>=4", "ipywidgets>=8", "pandas>=2", "nbclient>=0.10"]
 cuda = [
   "torch>=2.2",
   "transformers>=4.40",
